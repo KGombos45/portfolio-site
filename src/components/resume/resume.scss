@@ -1,6 +1,6 @@
 
 .resume {
-    height: 800px;
+    height: auto;
     width: 100vw;
     display: block;
     font-family: "Raleway", sans-serif;
@@ -10,5 +10,86 @@
         font-size: 34px;
         font-weight: bold;
         color: #042b33;
+    }
+
+    .resume-container {
+        width: 100%;
+
+        .section-sub-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0 20px 0;
+
+            .sub-header-underline {
+                margin: 0;
+            }
+        }
+
+        @media screen and (max-width: 960px) {
+            flex-direction: column;
+            align-items: center;
+
+            .education-timeline, .work-timeline {
+                width: 80% !important;
+                margin: 0 50px 0 50px !important;
+            }
+
+        }
+
+        .education-timeline, .work-timeline {
+            width: 50%;
+            margin: 0 50px 0 50px;
+            align-items: center;
+
+            .work-text, .school-text {
+                font-weight: bold;
+            }
+
+            .timeframe-text {
+                background: #dbf0f1;
+                border-radius: 6px;
+                height: 28px;
+                align-items: center;
+                padding: 2px 10px 5px 10px;
+            }
+
+            .ant-timeline-item-head {
+                color: #0ea2a0;
+                border-color: #0ea2a0;
+            }
+        }
+
+        .work-timeline {
+            margin-left: 275px;
+        }
+
+        .work-title {
+            font-style: italic;
+
+            ul, li {
+                font-style: normal;
+            }
+
+        }
+
+
+    }
+
+    .view-btn {
+        background: #e31b6d;
+        border-radius: 40px;
+        width: 165px;
+        height: 46px;
+        font-size: 16px;
+        border: 2px white solid;
+        transition: color 0.5s;
+        margin-top: 15px;
+        position: relative;
+        left: 0;
+
+        &:hover, :focus {
+            background: #14e4d6;
+            color: #e31b6d;
+        }
     }
 }

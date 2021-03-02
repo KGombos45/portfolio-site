@@ -11,11 +11,12 @@ function AppAbout() {
 
             <section className="about" id="about">
                 <div className="body-container flex">
-                    <ScrollAnimation animateIn='slideInLeft' initiallyVisible={false} animateOnce={true} duration={1}>
+                    
                         <div className="section-title">
+                        <ScrollAnimation animateIn='slideInLeft' initiallyVisible={false} animateOnce={true} duration={1}>
                             About
+                            </ScrollAnimation>
                         </div>
-                    </ScrollAnimation>
                     <ScrollAnimation animateIn='slideInRight' initiallyVisible={false} animateOnce={true} duration={1}>
                         <div className="section-title-underline" />
                     </ScrollAnimation>
@@ -65,6 +66,11 @@ function AppAbout() {
                                     </span>
 
                                     <span>
+                                        <img src="typescript.svg"></img>
+                                        Typescript
+                                    </span>
+
+                                    <span>
                                         <img src="jquery.png"></img>
                                         JQuery
                                     </span>
@@ -89,7 +95,7 @@ function AppAbout() {
                                         Oracle
                                     </span>
 
-                                    <div>
+                                    <div className="skills-text">
                                         And much more, with experience in back-end development with Microsoft Visual Studio. This includes C#/.Net, Java, C, C++. 
                                     </div>
 

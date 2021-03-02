@@ -12,7 +12,24 @@ body {
 .row {
   flex-direction: row;
 
-  
+
+}
+
+.section-title-underline {
+  height: 5px;
+  width: 65px;
+  background: #0ea2a0;
+  border-radius: 10px;
+
+  &.sub-header-underline {
+      height: 3px;
+      width: 55px;
+      background: #0ea2a0;
+      border-radius: 10px;
+      justify-content: center;
+      margin: 0 auto;
+      margin-top: 5px;
+  }
 }
 
 
@@ -27,4 +44,23 @@ body {
   width: 65px;
   background: #0ea2a0;
   border-radius: 10px;
+}
+
+.view-btn {
+  background: #e31b6d;
+  border-radius: 40px;
+  width: 165px;
+  height: 46px;
+  font-size: 16px;
+  border: 2px white solid;
+  transition: color 0.5s;
+  margin-top: 15px;
+  position: absolute;
+  bottom: 30px;
+  left: 30%;
+
+  &:hover, :focus {
+      background: #14e4d6;
+      color: #e31b6d;
+  }
 }
