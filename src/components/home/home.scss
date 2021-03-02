@@ -39,7 +39,10 @@
             z-index: 99;
             text-align: center;
             height: 135px;
-            
+
+            animation: fadeIn;
+            animation-duration: 2s;
+
             @media only screen and (max-width: 600px) {
                 height: 195px;
             }
@@ -60,6 +63,13 @@
             padding: 8px;
             font-family: "Raleway", sans-serif;
             z-index: 99;
+            animation: fadeIn;
+            animation-duration: 2s;
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
 
             .anticon svg {
                 transition: transform 0.3s;
@@ -111,7 +121,11 @@
                 width: 100%;
 
                 animation: slideInDown; 
-                animation-duration: 2s; 
+                animation-duration: 1s; 
+            }
+
+            .anticon {
+                display: none;
             }
             
             
@@ -138,6 +152,69 @@
                     &.active {
                         color: #e31b6d;
                     }
+                }
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .navMenu {
+
+                display: flex;
+                align-items: flex-end;
+                padding-right: 20px;
+
+                .anticon {
+                    color: white;
+                    display: inline;
+                    font-size: 20px;
+                    cursor: pointer;
+                    transition: color 0.5s;
+
+                    &:hover {
+                        color: #e31b6d
+                    }
+                }
+                
+                .menuItems-link-wrapper {
+                    transition: all 0.5s ease-in-out;
+                    width: 100%;
+                    text-align: left;
+                    max-width: 100vw;
+                    position: absolute;
+                    left: -200%;
+                    background: #051d28;
+                    height: 0px;
+
+                    &.active {
+                        left: 0;
+                        transition: all 0.5s ease-in-out;
+                        padding-top: 20px;
+                        top: 50px;
+                        height: 35vh;
+
+                        .menu-link {
+                            display: block;
+                            color: white;
+                            padding: 0 20px;
+                            font-size: 16px;
+                            text-transform: uppercase;
+                            transition: color 0.5s;
+                            cursor: pointer;
+                            font-weight: bold;
+                            text-align: left;
+                            padding: 5px;
+                            padding-left: 25px;
+
+                            &:hover {
+                                color: #e31b6d
+                            }
+        
+                            &.active {
+                                color: #e31b6d;
+                            }
+                        }
+                    }
+
                 }
             }
         }

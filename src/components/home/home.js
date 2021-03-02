@@ -1,11 +1,12 @@
 import React from 'react';
 import './home.scss';
 import { Button } from 'antd';
-import { ArrowRightOutlined } from '@ant-design/icons';
+import { ArrowRightOutlined, MenuOutlined } from '@ant-design/icons';
 import { useState } from 'react';
+import { Link } from 'react-scroll';
 
 function AppHome() {
-    const [navbar, setNavbar] = useState(false);   
+    const [navBarMobile, setVisibility] = useState(false);   
 
     const showNavBar = () => {
         var navbar = document.getElementById("navbar");  
@@ -13,15 +14,18 @@ function AppHome() {
 
         if (window.scrollY > 1 && window.scrollY <= home.clientHeight && navbar.classList.contains("hidden")) {
             navbar.classList.remove("hidden");
-        } else if (window.scrollY > home.clientHeight && !navbar.classList.contains("hidden")) {
+        } else if (window.scrollY >= home.clientHeight && !navbar.classList.contains("hidden")) {
             navbar.classList.add("sticky");
-        } else if (window.scrollY < home.clientHeight && navbar.classList.contains("sticky")) {
+        } else if (window.scrollY <= home.clientHeight && navbar.classList.contains("sticky")) {
             navbar.classList.remove("sticky");
             navbar.classList.add("hidden");
         } 
-        
+
     };
 
+    const handleClick = () => {
+        setVisibility(!navBarMobile)
+    };
 
     window.addEventListener('scroll', showNavBar);
 
@@ -39,17 +43,20 @@ function AppHome() {
                    <br />
                             I am a full-stack web developer.
                 </div>
-                <Button type="primary" className="outline__round">
-                    View My Portfolio
-                    <ArrowRightOutlined />
-                </Button>
+                <Link to="about" smooth={true} duraction ={1000}>
+                    <Button type="primary" className="outline__round">
+                        View My Portfolio
+                        <ArrowRightOutlined/>
+                    </Button>
+                </Link>
                 <nav className="flex navMenu hidden" id="navbar">
-                    <div className="menuItems-link-wrapper">
-                        <div className="menu-link active" to="home">home</div>
-                        <div className="menu-link" to="about">about</div>
-                        <div className="menu-link">portfolio</div>
-                        <div className="menu-link">resume</div>
-                        <div className="menu-link">contact</div>
+                    <MenuOutlined onClick={handleClick} />
+                    <div className={navBarMobile ? 'menuItems-link-wrapper active' : 'menuItems-link-wrapper'}>
+                        <Link className="menu-link" to="home" smooth={true} duraction ={1000} spy={true} activeClass="active">home</Link>
+                        <Link className="menu-link" to="about" smooth={true} duraction ={1000} spy={true} activeClass="active">about</Link>
+                        <Link className="menu-link" to="portfolio" smooth={true} duraction ={1000} spy={true} activeClass="active">portfolio</Link>
+                        <Link className="menu-link" to="resume" smooth={true} duraction ={1000} spy={true} activeClass="active">resume</Link>
+                        <Link className="menu-link" to="contact" smooth={true} duraction ={1000} spy={true} activeClass="active">contact</Link>
                     </div>
                 </nav>
             </div>            

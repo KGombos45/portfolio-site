@@ -1,16 +1,76 @@
 
 .contact {
-    height: 800px;
+    height: 650px;
     width: 100vw;
     display: block;
     font-family: "Raleway", sans-serif;
     background: #042b33;
+    border-top: solid #0e9b98 3px;
+    padding: 100px 0 100px 0;
+}
 
-    .section-title {
-        padding-top: 75px;
-        font-size: 34px;
-        font-weight: bold;
+.section-title {
+    font-size: 34px;
+    font-weight: bold;
+    color: white;
+}
+
+.section-sub-title {
+
+    padding-top: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #e31b6d;
+}
+
+.contact-form {
+    width: 100%;
+    height: auto;
+    min-width: 450px;
+    margin-top: 40px;
+
+    @media screen and (max-width: 600px) {
+        margin-left: -25px;
+    }
+
+    input, textarea {
+        display: block;
+        width: 100%;
+        background: #002229;
         color: white;
+        border: none;
+        padding: 6px;
+        margin: 5px;
+
+        &:focus, :active {
+            border: none;
+            outline: none;
+        }
+    }
+
+    textarea {
+        height: 160px;
+    }
+
+    .submit-btn {
+        border-radius: 40px;
+        margin-top: 8px;
+        border: none;
+        background: transparent;
+        font-weight: bold;
+        font-size: 16px;
+        float: right;
+        width: 100px;
+        height: 40px;
+        color: #b1b1b1;
+        border: 2px #b1b1b1 solid;
+        transition: color 0.5s;
+
+        &:hover {
+            background: #e31b6d;
+            color: white;
+            border-color: white;
+        }
     }
 }
 
