@@ -28,11 +28,12 @@
 .contact-form {
     width: 100%;
     height: auto;
-    min-width: 450px;
+    min-width: 395px;
     margin-top: 85px;
 
     @media screen and (max-width: 600px) {
         padding: 0 20px 0 20px;
+        margin-left: -5px;
     }
 
     input, textarea {
