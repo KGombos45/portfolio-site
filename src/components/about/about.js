@@ -22,7 +22,7 @@ function AppAbout() {
                     <div className="about-container flex row">
                        
                             <div className="flex section-about">
-                            <ScrollAnimation animateIn='slideInUp' initiallyVisible={false} animateOnce={true} duration={1}>
+                            <ScrollAnimation animateIn='slideInLeft' initiallyVisible={false} animateOnce={true} duration={1}>
                                 <img src="me.jfif"></img>
                                 <div className="section-sub-header">
                                     About Me
@@ -42,7 +42,7 @@ function AppAbout() {
                             </div>
 
                             <div className="flex section-skills">
-                            <ScrollAnimation animateIn='slideInDown' initiallyVisible={false} animateOnce={true} duration={1}>
+                            <ScrollAnimation animateIn='slideInRight' initiallyVisible={false} animateOnce={true} duration={1}>
 
                                 <div className="section-sub-header">
                                     Skills
