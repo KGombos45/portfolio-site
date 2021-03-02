@@ -1,3 +1,5 @@
+permalink: /index.html
+
 # Welcome to my portfolio app
 
 ![](https://repository-images.githubusercontent.com/342786786/aac0f080-789a-11eb-90cc-326c6c1e4791)
