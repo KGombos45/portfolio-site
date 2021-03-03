@@ -7,7 +7,7 @@ import AppPortfolio from './components/portfolio/portfolio';
 import AppResume from './components/resume/resume';
 import AppContact from './components/contact/contact';
 import AppFooter from './components/footer/footer';
-
+import Modal from './components/modal/modal';
 
 function App() {
   return (

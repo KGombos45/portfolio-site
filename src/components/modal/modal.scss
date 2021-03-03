@@ -1,0 +1,90 @@
+.modal-backdrop {
+    height: 100vh;
+    width: 100vw;
+    background: #00000063;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    .modal-container {
+        max-width: 735px;
+        width: 100%;
+        height: calc(100vh - 200px);
+        background: white;
+
+        .modal-video-container {
+            width: 100%;
+            height: 415px;
+            border-bottom: solid #0e9b98 3px;
+
+            video {
+                height: 100%;
+                width: 100%;
+                object-fit: fill;
+            }
+        }
+
+        .modal-content {
+
+            padding: 25px;
+
+            .modal-title {
+                font-size: 26px;
+                font-weight: bold;
+
+                .modal-subtitle {
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #e31b6d;
+                    padding-bottom: 12px;
+                    border-bottom: 1px #9696967d solid;
+                }
+            }
+
+            .modal-body {
+                margin-top: 30px;
+                min-height: 105px;
+            }
+
+            .modal-footer {
+                .viewSite-btn {
+                    background: #e31b6d;
+                    border-radius: 40px;
+                    width: 165px;
+                    height: 46px;
+                    font-size: 16px;
+                    border: 2px white solid;
+                    transition: color 0.5s;
+                    margin-top: 15px;
+    
+                    &:hover, :focus {
+                        background: #14e4d6;
+                        color: #e31b6d;
+                    }
+                }
+
+                .exit-icon {
+                    background: #e31b6d;
+                    cursor: pointer;
+                    height: 55px;
+                    width: 55px;
+                    position: relative;
+                    text-align: center;
+                    color: white;
+                    font-size: 44px;
+                    transition: color 0.5s;
+                    margin: 10px 10px;
+                    border-radius: 40px;
+                    border: 2px white solid;
+                    float: right;
+            
+                    &:hover {
+                        color: #14e4d6;
+                        border-color: #14e4d6;
+                    }
+                }
+            }
+        }
+    }
+}
