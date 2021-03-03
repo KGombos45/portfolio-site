@@ -12,12 +12,12 @@ import AppFooter from './components/footer/footer';
 function App() {
   return (
     <div>
-        <AppHome/>
-        <AppAbout/>
+        <AppHome />
+        <AppAbout />
         <AppPortfolio />
         <AppResume />
-        <AppContact/>
-        <AppFooter/>
+        <AppContact />
+        <AppFooter />
     </div>
   );
 }
