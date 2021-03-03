@@ -1,7 +1,6 @@
 import './App.scss';
 import 'antd/dist/antd.css';
 import "animate.css/animate.compat.css";
-import { Layout } from 'antd';
 import AppHome from './components/home/home';
 import AppAbout from './components/about/about';
 import AppPortfolio from './components/portfolio/portfolio';

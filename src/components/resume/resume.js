@@ -47,7 +47,7 @@ function AppResume() {
                             </div>
                             <ul>
                                 <li>Bachelor of Arts in Philosophy</li>
-                                <li>Bachelor of Arts in Philosophy</li>
+                                <li>Bachelor of Arts in Political Science</li>
                             </ul>
 
                         </Timeline.Item>
