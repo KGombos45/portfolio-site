@@ -73,7 +73,7 @@
         border: 2px #b1b1b1 solid;
         transition: color 0.5s;
 
-        &:hover {
+        &:hover, :focus, :active {
             background: #e31b6d;
             color: white;
             border-color: white;
