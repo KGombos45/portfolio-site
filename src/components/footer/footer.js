@@ -36,7 +36,7 @@ const scrollToTop = () => {
                 </a>
             </div>
             <div className="footnote-wrapper">
-                <div class="footnote-text">
+                <div className="footnote-text">
                     KEVIN GOMBOS ©2021
                 </div>
             </div>
