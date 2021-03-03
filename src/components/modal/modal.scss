@@ -6,12 +6,31 @@
     top: 0;
     left: 0;
     z-index: 1000;
+    animation: fadeIn;
+    animation-duration: .8s;
+
+    &.close {
+        animation: fadeOut;
+        animation-duration: .8s;
+    }
 
     .modal-container {
         max-width: 735px;
         width: 100%;
         height: calc(100vh - 200px);
         background: white;
+        transition: all 0.8s ease-in-out;
+        -webkit-box-shadow: 5px 5px 15px 8px rgba(0,0,0,0.3); 
+        box-shadow: 5px 5px 15px 8px rgba(0,0,0,0.3);
+
+        animation: zoomIn;
+        animation-duration: .8s;
+
+        &.close {
+            animation: zoomOut;
+            animation-duration: .8s;
+        }
+
 
         .modal-video-container {
             width: 100%;
@@ -56,7 +75,6 @@
                     font-size: 16px;
                     border: 2px white solid;
                     transition: color 0.5s;
-                    margin-top: 15px;
     
                     &:hover, :focus {
                         background: #14e4d6;
@@ -67,14 +85,13 @@
                 .exit-icon {
                     background: #e31b6d;
                     cursor: pointer;
-                    height: 55px;
-                    width: 55px;
+                    height: 46px;
+                    width: 46px;
                     position: relative;
                     text-align: center;
                     color: white;
-                    font-size: 44px;
+                    font-size: 28px;
                     transition: color 0.5s;
-                    margin: 10px 10px;
                     border-radius: 40px;
                     border: 2px white solid;
                     float: right;

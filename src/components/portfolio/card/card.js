@@ -1,5 +1,7 @@
 import React, { Component, useState } from 'react'
 import './../portfolio.scss';
+import "animate.css/animate.compat.css";
+
 import ScrollAnimation from 'react-animate-on-scroll';
 import { ArrowRightOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
@@ -8,7 +10,16 @@ import Modal from '../../modal/modal';
 function Card() {
 
     const [showModal, setModal] = useState(false);
-    const closeModal = () => setModal(false);
+    const closeModal = () => {
+        var modal = document.getElementById("modal");
+        modal.classList.add("close");
+        var modalBackdrop = document.getElementById("modalBackDrop");
+        modalBackdrop.classList.add("close");
+
+        setTimeout(function(){ setModal(false); }, 700);
+        
+    }
+
     const [modalData, setData] = useState();
 
     function toggleModal (item) {
@@ -114,7 +125,7 @@ function Card() {
 
             }
 
-                             <Modal show={showModal} closeModal={closeModal} data={modalData}/>   
+            <Modal show={showModal} closeModal={closeModal} data={modalData}/>   
         </div>
         
     )

@@ -1,5 +1,6 @@
 import React from 'react';
 import './modal.scss';
+import "animate.css/animate.compat.css";
 import { Button } from 'antd';
 import { ExportOutlined, CloseCircleOutlined } from '@ant-design/icons';
 
@@ -8,8 +9,8 @@ export const Modal = ({show, closeModal, data }) => {
     if (show) {
         console.log(show);
         return (
-            <div className="modal-backdrop flex">
-                <div className="modal-container">
+            <div className="modal-backdrop flex" id="modalBackDrop">
+                <div className="modal-container" id="modal">
                 <div className="modal-video-container">
                     <video src={data.src} autoPlay muted loop></video>
                 </div>
