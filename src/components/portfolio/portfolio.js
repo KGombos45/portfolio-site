@@ -23,7 +23,7 @@ function AppPortfolio() {
                     <ScrollAnimation animateIn='slideInLeft' initiallyVisible={false} animateOnce={true} duration={1}>
                         <div className="card-item">
                             <div className="card-front">
-                                <img className="card-img" src="uhone-home.jpg"></img>
+                                <img className="card-img" src="uhone-home.jpg" alt="UHOne Home"></img>
                             </div>
                             <div className="card-back">
 
@@ -47,7 +47,7 @@ function AppPortfolio() {
                     <ScrollAnimation animateIn='slideInLeft' initiallyVisible={false} animateOnce={true} duration={1}>
                         <div className="card-item">
                             <div className="card-front">
-                                <img className="card-img" src="uhone-shop.png"></img>
+                                <img className="card-img" src="uhone-shop.png" alt="UHOne Shop"></img>
                             </div>
                             <div className="card-back">
 
@@ -70,7 +70,7 @@ function AppPortfolio() {
                     <ScrollAnimation animateIn='slideInRight' initiallyVisible={false} animateOnce={true} duration={1}>
                         <div className="card-item">
                             <div className="card-front">
-                                <img className="card-img" src="portfolio.jpg"></img>
+                                <img className="card-img" src="portfolio.jpg" alt="Portfolio"></img>
                             </div>
                             <div className="card-back">
 
@@ -93,7 +93,7 @@ function AppPortfolio() {
                     <ScrollAnimation animateIn='slideInRight' initiallyVisible={false} animateOnce={true} duration={1}>
                         <div className="card-item">
                             <div className="card-front">
-                                <img className="card-img" src="bugtracker.jpg"></img>
+                                <img className="card-img" src="bugtracker.jpg" alt="Bugtracker"></img>
                             </div>
                             <div className="card-back">
 

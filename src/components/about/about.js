@@ -24,7 +24,7 @@ function AppAbout() {
                        
                             <div className="flex section-about">
                             <ScrollAnimation animateIn='slideInLeft' initiallyVisible={false} animateOnce={true} duration={1}>
-                                <img src="me.jfif"></img>
+                                <img src="me.jfif" alt="Profile Picture"></img>
                                 <div className="section-sub-header">
                                     About Me
                                     <div className="section-title-underline sub-header-underline" />
@@ -51,47 +51,47 @@ function AppAbout() {
                                 </div>
                                 <div className="skills-area row">
                                     <span>
-                                        <img src="angular.png"></img>
+                                        <img src="angular.png" alt="Angular"></img>
                                         Angular and <br></br>AngularJS
                                     </span>
                                                                    
                                     <span>                                        
-                                        <img src="react.svg"></img>
-                                        React
+                                        <img src="react.svg" alt="React"></img>
+                                        React.js
                                     </span>
 
                                     <span>
-                                        <img src="javascript.svg"></img>
+                                        <img src="javascript.svg" alt="Javascript"></img>
                                         Javascript
                                     </span>
 
                                     <span>
-                                        <img src="typescript.svg"></img>
+                                        <img src="typescript.svg" alt="Typescript"></img>
                                         Typescript
                                     </span>
 
                                     <span>
-                                        <img src="jquery.png"></img>
+                                        <img src="jquery.png" alt="JQuery"></img>
                                         JQuery
                                     </span>
 
                                     <span>
-                                        <img src="html5.png"></img>
+                                        <img src="html5.png" alt="HTML5"></img>
                                         HTML5
                                     </span>
 
                                     <span>
-                                        <img src="css3.png"></img>
+                                        <img src="css3.png" alt="CSS3"></img>
                                         CSS3
                                     </span>
                                     
                                     <span>
-                                        <img src="sqlserver.svg"></img>
+                                        <img src="sqlserver.svg" alt="SQLServer"></img>
                                         Microsoft SQLServer
                                     </span>
 
                                     <span>
-                                        <img src="oracle.svg"></img>
+                                        <img src="oracle.svg" alt="Oracle"></img>
                                         Oracle
                                     </span>
 
