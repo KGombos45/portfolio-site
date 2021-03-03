@@ -1,7 +1,6 @@
 import React from 'react'
 import './contact.scss';
 import ScrollAnimation from 'react-animate-on-scroll';
-import { Button } from 'antd';
 import emailjs from 'emailjs-com';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

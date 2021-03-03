@@ -9,8 +9,6 @@ import AppResume from './components/resume/resume';
 import AppContact from './components/contact/contact';
 import AppFooter from './components/footer/footer';
 
-const { Header, Content } = Layout;
-
 
 function App() {
   return (

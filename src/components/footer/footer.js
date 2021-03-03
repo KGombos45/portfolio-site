@@ -1,6 +1,6 @@
 import React from 'react'
 import './footer.scss';
-import { LinkedinOutlined, GithubOutlined, InstagramOutlined, UpSquareOutlined, UpCircleOutlined } from '@ant-design/icons';
+import { LinkedinOutlined, GithubOutlined, InstagramOutlined, UpCircleOutlined } from '@ant-design/icons';
 
 
 function AppFooter() {
