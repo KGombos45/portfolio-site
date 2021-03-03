@@ -40,7 +40,7 @@
         min-width: 405px;
     }
 
-    input, textarea {
+    .input-box, .input-box-textarea {
         display: block;
         width: 100%;
         background: #002229;
@@ -55,7 +55,7 @@
         }
     }
 
-    textarea {
+    .input-box-textarea {
         height: 160px;
     }
 
@@ -73,10 +73,17 @@
         border: 2px #b1b1b1 solid;
         transition: color 0.5s;
 
-        &:hover, :focus, :active {
+        &:hover {
             background: #e31b6d;
             color: white;
             border-color: white;
+        }
+
+        &:focus {
+            background: #e31b6d;
+            color: white;
+            border-color: white;
+            outline: none;
         }
     }
 }

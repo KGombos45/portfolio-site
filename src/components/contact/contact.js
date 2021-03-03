@@ -57,9 +57,9 @@ export default function AppContact() {
             </ScrollAnimation>
             <ScrollAnimation animateIn='slideInUp' initiallyVisible={false} animateOnce={true} duration={1}>
                 <form className="contact-form" onSubmit={sendEmail}>
-                    <input type="text" placeholder="Name" name="name" required></input>
-                    <input type="email" placeholder="Email" name="email" required></input>
-                    <textarea type="text" placeholder="Enter your message here..." name="subject" required></textarea>
+                    <input className="input-box" type="text" placeholder="Name" name="name" required></input>
+                    <input className="input-box" type="email" placeholder="Email" name="email" required></input>
+                    <textarea className="input-box-textarea" type="text" placeholder="Enter your message here..." name="subject" required></textarea>
                     <input type="submit" className="submit-btn" value="Submit"></input>
                 </form>
             </ScrollAnimation>
