@@ -1,8 +1,10 @@
 import React from 'react';
 import './modal.scss';
 import "animate.css/animate.compat.css";
+import 'react-perfect-scrollbar/dist/css/styles.css';
 import { Button } from 'antd';
 import { ExportOutlined, CloseCircleOutlined } from '@ant-design/icons';
+import PerfectScrollbar from 'react-perfect-scrollbar'
 
 
 export const Modal = ({show, closeModal, data }) => {
@@ -24,7 +26,9 @@ export const Modal = ({show, closeModal, data }) => {
                             </div>
                         </div>
                         <div className="modal-body">
-                            {data.cardBody}
+                            <PerfectScrollbar>
+                                {data.cardBody}
+                            </PerfectScrollbar>
                         </div>
                         <div className="modal-footer">
                             <a href={data.link} target="_blank">
