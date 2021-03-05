@@ -9,7 +9,6 @@ import PerfectScrollbar from 'react-perfect-scrollbar'
 
 export const Modal = ({show, closeModal, data }) => {
     if (show) {
-        console.log(show);
         return (
             <div className="modal-backdrop flex" id="modalBackDrop">
                 <div className="modal-container" id="modal">
