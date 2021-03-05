@@ -30,14 +30,14 @@ function Card() {
 
     const Data = [
         {
-            "src": "uhone-main.mp4",
+            "src": "uhone.webm",
             "cardTitle": "UHOne",
             "cardSubtitle": "Javascript/JQuery/HTML/Less/AEM",
             "cardBody": "I was brought on to assist with this project, where our marketing team was working to rebuild our UHOne site as well as convert it from Sitecore to Adobe Experience Manager (AEM).",
             "link": "https://www.uhone.com/"
         },
         {
-            "src": "uhone-shop-main.mp4",
+            "src": "uhone-shop.webm",
             "cardTitle": "UHOne Shop",
             "cardSubtitle": "AngularJS/Javascript/HTML/Bootstrap/SCSS/C#",
             "cardBody": "UHOne Shop is a full-stack website built off of .Net Core/C# with Microsoft SQL Server for the back-end. Front-end utilizes AngularJS, Javascript, custom Boostrap components, HTML, and SCSS.",
@@ -73,7 +73,9 @@ function Card() {
                                 <ScrollAnimation animateIn='slideInRight' initiallyVisible={false} animateOnce={true} duration={1}>
                                     <div className="card-item">
                                         <div className="card-front">
-                                            <video src={item.src} className="card-video" autoPlay muted loop></video>
+                                            <video className="card-video" autoPlay preload={'auto'} muted loop>
+                                                <source src={item.src}></source>
+                                            </video>
                                         </div>
                                         <div className="card-back">
 
@@ -99,7 +101,9 @@ function Card() {
                                 <ScrollAnimation animateIn='slideInLeft' initiallyVisible={false} animateOnce={true} duration={1}>
                                     <div className="card-item">
                                         <div className="card-front">
-                                            <video src={item.src} className="card-video" autoPlay muted loop></video>
+                                            <video className="card-video" autoPlay preload={'auto'} muted loop>
+                                                <source src={item.src}></source>
+                                            </video>
                                         </div>
                                         <div className="card-back">
 

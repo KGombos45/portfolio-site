@@ -12,7 +12,9 @@ export const Modal = ({show, closeModal, data }) => {
             <div className="modal-backdrop flex" id="modalBackDrop">
                 <div className="modal-container" id="modal">
                 <div className="modal-video-container">
-                    <video src={data.src} autoPlay muted loop></video>
+                    <video autoPlay preload={'auto'} muted loop>
+                        <source src={data.src}></source>
+                    </video>
                 </div>
                     <div className="modal-content">
                         <div className="modal-title">
