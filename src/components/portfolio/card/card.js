@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, { useState } from 'react'
 import './../portfolio.scss';
 import "animate.css/animate.compat.css";
 
@@ -77,7 +77,7 @@ function Card() {
                                 <ScrollAnimation animateIn='slideInRight' initiallyVisible={false} animateOnce={true} duration={1}>
                                     <div className="card-item">
                                         <div className="card-front">
-                                            <img className="card-img" src={item.svg}></img> 
+                                            <img className="card-img" src={item.svg} alt={item.cardTitle}></img> 
                                         </div>
                                         <div className="card-back">
 
@@ -103,7 +103,7 @@ function Card() {
                                 <ScrollAnimation animateIn='slideInLeft' initiallyVisible={false} animateOnce={true} duration={1}>
                                     <div className="card-item">
                                         <div className="card-front">
-                                            <img className="card-img" src={item.svg}></img> 
+                                            <img className="card-img" src={item.svg} alt={item.cardTitle}></img> 
                                         </div>
                                         <div className="card-back">
 

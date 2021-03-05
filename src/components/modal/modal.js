@@ -31,7 +31,7 @@ export const Modal = ({show, closeModal, data }) => {
                             </PerfectScrollbar>
                         </div>
                         <div className="modal-footer">
-                            <a href={data.link} target="_blank">
+                            <a href={data.link} target="_blank" rel="noreferrer">
                                 <Button type="primary" className="viewSite-btn">
                                     View Site
                                     <ExportOutlined />
