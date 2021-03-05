@@ -60,12 +60,21 @@
                 font-size: 26px;
                 font-weight: bold;
 
+                
+                @media only screen and (max-width:450px) {
+                    font-size: 22px;
+                }
+
                 .modal-subtitle {
                     font-size: 18px;
                     font-weight: bold;
                     color: #e31b6d;
                     padding-bottom: 12px;
                     border-bottom: 1px #9696967d solid;
+
+                    @media only screen and (max-width:450px) {
+                        font-size: 14px;
+                    }
                 }
             }
 
