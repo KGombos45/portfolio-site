@@ -109,9 +109,10 @@
                     border: 2px white solid;
                     float: right;
 
-                    &:hover {
-                        color: #14e4d6;
-                        border-color: #14e4d6;
+                    &:hover,
+                    :focus {
+                        background: #14e4d6;
+                        color: #e31b6d;
                     }
                 }
             }
