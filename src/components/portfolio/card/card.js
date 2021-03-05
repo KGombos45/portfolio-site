@@ -31,6 +31,7 @@ function Card() {
     const Data = [
         {
             "src": "uhone-main.mp4",
+            "svg": "uhone.svg",
             "cardTitle": "UHOne",
             "cardSubtitle": "Javascript/JQuery/HTML/Less/AEM",
             "cardBody": "I was brought on to assist with this project, where our marketing team was working to rebuild our UHOne site as well as convert it from Sitecore to Adobe Experience Manager (AEM).",
@@ -38,6 +39,7 @@ function Card() {
         },
         {
             "src": "uhone-shop-main.mp4",
+            "svg": "uhone-shop.svg",
             "cardTitle": "UHOne Shop",
             "cardSubtitle": "AngularJS/Javascript/HTML/Bootstrap/SCSS/C#",
             "cardBody": "UHOne Shop is a full-stack website built off of .Net Core/C# with Microsoft SQL Server for the back-end. Front-end utilizes AngularJS, Javascript, custom Boostrap components, HTML, and SCSS.",
@@ -45,6 +47,7 @@ function Card() {
         },
         {
             "src": "portfolio.mp4",
+            "svg": "portfolio.svg",
             "cardTitle": "Portfolio",
             "cardSubtitle": "React.js/Javascript/HTML/SCSS",
             "cardBody": "My portfolio site built from the ground up using the React.js framework, Javascript, and basic HTML and SCSS styling.",
@@ -52,6 +55,7 @@ function Card() {
         },
         {
             "src": "bugtracker.mp4",
+            "svg": "bugtracker.svg",
             "cardTitle": "Bugtracker",
             "cardSubtitle": "Angular/Typescript/HTML/Angular Material/SCSS/C#",
             "cardBody": "A full-stack website built off of .Net Core/C# with Microsoft SQL Server for the back-end. Front-end utilizes Angular 7, Angular Material, HTML, and SCSS."
@@ -73,9 +77,7 @@ function Card() {
                                 <ScrollAnimation animateIn='slideInRight' initiallyVisible={false} animateOnce={true} duration={1}>
                                     <div className="card-item">
                                         <div className="card-front">
-                                            <video className="card-video" autoPlay preload={'auto'} muted loop>
-                                                <source src={item.src}></source>
-                                            </video>
+                                            <img className="card-img" src={item.svg}></img> 
                                         </div>
                                         <div className="card-back">
 
@@ -101,9 +103,7 @@ function Card() {
                                 <ScrollAnimation animateIn='slideInLeft' initiallyVisible={false} animateOnce={true} duration={1}>
                                     <div className="card-item">
                                         <div className="card-front">
-                                            <video className="card-video" autoPlay preload={'auto'} muted loop>
-                                                <source src={item.src}></source>
-                                            </video>
+                                            <img className="card-img" src={item.svg}></img> 
                                         </div>
                                         <div className="card-back">
 
