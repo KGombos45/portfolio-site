@@ -168,7 +168,10 @@
                     display: inline;
                     font-size: 20px;
                     cursor: pointer;
-                    transition: color 0.5s;
+                    transition: all 0.5s ease-in-out; 
+                    
+                    animation: zoomIn;
+                    animation-duration: 1s;
 
                     &:hover {
                         color: #e31b6d
@@ -181,16 +184,21 @@
                     text-align: left;
                     max-width: 100vw;
                     position: absolute;
-                    left: -200%;
                     background: #051d28;
                     height: 0px;
+                    visibility: hidden;
+                    top: 50px;
+                    left: 0;
+
+                    .menu-link {
+                        visibility: hidden;
+                    }
 
                     &.active {
-                        left: 0;
                         transition: all 0.5s ease-in-out;
                         padding-top: 20px;
-                        top: 50px;
                         height: 35vh;
+                        visibility: visible;
 
                         .menu-link {
                             display: block;
@@ -204,6 +212,7 @@
                             text-align: left;
                             padding: 5px;
                             padding-left: 25px;
+                            visibility: visible;
 
                             &:hover {
                                 color: #e31b6d

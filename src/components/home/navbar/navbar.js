@@ -2,7 +2,7 @@ import React from 'react'
 import './../home.scss';
 import { useState } from 'react';
 import { Link } from 'react-scroll';
-import { MenuOutlined } from '@ant-design/icons';
+import { MenuOutlined, CloseOutlined } from '@ant-design/icons';
 
 function Navbar() {
 
@@ -31,7 +31,10 @@ function Navbar() {
 
     return (
         <nav className="flex navMenu hidden" id="navbar">
-        <MenuOutlined onClick={handleClick} />
+        <div className="hamburger-icon-container" onClick={handleClick}>
+            { !navBarMobile ? <MenuOutlined/> : null }
+            { navBarMobile ? <CloseOutlined /> : null }
+        </div>
         <div className={navBarMobile ? 'menuItems-link-wrapper active' : 'menuItems-link-wrapper'}>
             <Link className="menu-link" to="home" smooth={true} duraction ={1000} spy={true} activeClass="active">home</Link>
             <Link className="menu-link" to="about" smooth={true} duraction ={1000} spy={true} activeClass="active">about</Link>
