@@ -30,14 +30,14 @@ function Card() {
 
     const Data = [
         {
-            "src": "uhone.webm",
+            "src": "uhone.mp4",
             "cardTitle": "UHOne",
             "cardSubtitle": "Javascript/JQuery/HTML/Less/AEM",
             "cardBody": "I was brought on to assist with this project, where our marketing team was working to rebuild our UHOne site as well as convert it from Sitecore to Adobe Experience Manager (AEM).",
             "link": "https://www.uhone.com/"
         },
         {
-            "src": "uhone-shop.webm",
+            "src": "uhone-shop.mp4",
             "cardTitle": "UHOne Shop",
             "cardSubtitle": "AngularJS/Javascript/HTML/Bootstrap/SCSS/C#",
             "cardBody": "UHOne Shop is a full-stack website built off of .Net Core/C# with Microsoft SQL Server for the back-end. Front-end utilizes AngularJS, Javascript, custom Boostrap components, HTML, and SCSS.",
