@@ -7,11 +7,11 @@
     left: 0;
     z-index: 1000;
     animation: fadeIn;
-    animation-duration: .8s;
+    animation-duration: 0.8s;
 
     &.close {
         animation: fadeOut;
-        animation-duration: .8s;
+        animation-duration: 0.8s;
     }
 
     .modal-container {
@@ -19,18 +19,21 @@
         width: 100%;
         background: white;
         transition: all 0.8s ease-in-out;
-        -webkit-box-shadow: 5px 5px 15px 8px rgba(0,0,0,0.3); 
-        box-shadow: 5px 5px 15px 8px rgba(0,0,0,0.3);
+        -webkit-box-shadow: 5px 5px 15px 8px rgba(0, 0, 0, 0.3);
+        box-shadow: 5px 5px 15px 8px rgba(0, 0, 0, 0.3);
         border-radius: 8px;
 
         animation: zoomIn;
-        animation-duration: .8s;
+        animation-duration: 0.8s;
+
+        @media only screen and (max-height: 480px) {
+            overflow-y: auto;
+        }
 
         &.close {
             animation: zoomOut;
-            animation-duration: .8s;
+            animation-duration: 0.8s;
         }
-
 
         .modal-video-container {
             width: 100%;
@@ -51,7 +54,6 @@
         }
 
         .modal-content {
-
             padding: 25px;
 
             .modal-title {
@@ -69,7 +71,11 @@
 
             .modal-body {
                 margin-top: 30px;
-                min-height: 105px;
+                margin-bottom: 20px;
+
+                .ps {
+                    max-height: 185px;
+                }
             }
 
             .modal-footer {
@@ -81,8 +87,9 @@
                     font-size: 16px;
                     border: 2px white solid;
                     transition: color 0.5s;
-    
-                    &:hover, :focus {
+
+                    &:hover,
+                    :focus {
                         background: #14e4d6;
                         color: #e31b6d;
                     }
@@ -101,7 +108,7 @@
                     border-radius: 40px;
                     border: 2px white solid;
                     float: right;
-            
+
                     &:hover {
                         color: #14e4d6;
                         border-color: #14e4d6;
