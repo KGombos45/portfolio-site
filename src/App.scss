@@ -1,3 +1,10 @@
+:root {
+  --pink: #e31b6d;
+  --brightCyan: #14e4d6;
+  --mediumCyan: #0ea2a0;
+}
+
+
 body {
   overflow-x: hidden;
 }
@@ -18,13 +25,13 @@ body {
 .section-title-underline {
   height: 5px;
   width: 65px;
-  background: #0ea2a0;
+  background: var(--mediumCyan);
   border-radius: 10px;
 
   &.sub-header-underline {
       height: 3px;
       width: 55px;
-      background: #0ea2a0;
+      background: var(--mediumCyan);
       border-radius: 10px;
       justify-content: center;
       margin: 0 auto;
@@ -42,12 +49,12 @@ body {
 .section-title-underline {
   height: 5px;
   width: 65px;
-  background: #0ea2a0;
+  background: var(--mediumCyan);
   border-radius: 10px;
 }
 
 .view-btn {
-  background: #e31b6d;
+  background: var(--pink);
   border-radius: 40px;
   width: 165px;
   height: 46px;
@@ -60,7 +67,7 @@ body {
   left: 30%;
 
   &:hover, :focus {
-      background: #14e4d6;
-      color: #e31b6d;
+      background: var(--brightCyan);
+      color: var(--pink);
   }
 }

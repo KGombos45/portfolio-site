@@ -56,8 +56,8 @@
             }
 
             .ant-timeline-item-head {
-                color: #0ea2a0;
-                border-color: #0ea2a0;
+                color: var(--mediumCyan);
+                border-color: var(--mediumCyan);
             }
         }
 
@@ -78,7 +78,7 @@
     }
 
     .view-btn {
-        background: #e31b6d;
+        background: var(--pink);
         border-radius: 40px;
         width: 165px;
         height: 46px;
@@ -90,8 +90,8 @@
         left: 0;
 
         &:hover, :focus {
-            background: #14e4d6;
-            color: #e31b6d;
+            background: var(--brightCyan);
+            color: var(--pink);
         }
     }
 }

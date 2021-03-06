@@ -11,7 +11,7 @@ footer {
     .scroll-to-top{
         text-align: center;
         color: white;
-        background: #e31b6d;
+        background: var(--pink);
         width: 55px;
         height: 55px;
         font-size: 34px;
@@ -29,8 +29,8 @@ footer {
 
 
         &:hover {
-            background: #14e4d6;
-            color: #e31b6d;
+            background: var(--brightCyan);
+            color: var(--pink);
         }
     }
 
@@ -41,16 +41,16 @@ footer {
         width: 55px;
         position: relative;
         text-align: center;
-        color: #e31b6d;
+        color: var(--pink);
         font-size: 24px;
         transition: color 0.5s;
         margin: 10px 10px;
         border-radius: 40px;
-        border: 2px #e31b6d solid;
+        border: 2px var(--pink) solid;
 
         &:hover {
-            color: #14e4d6;
-            border-color: #14e4d6;
+            color: var(--brightCyan);
+            border-color: var(--brightCyan);
         }
     }
 

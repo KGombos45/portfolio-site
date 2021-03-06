@@ -46,7 +46,7 @@
             animation-duration: 2s;
 
             .highlight {
-                color: #e31b6d;
+                color: var(--pink);
             }
         }
 
@@ -71,29 +71,29 @@
 
             .anticon svg {
                 transition: transform 0.3s;
-                color: #e31b6d;
+                color: var(--pink);
             }
 
             &:hover {
-                background-color: #e31b6d;
+                background-color: var(--pink);
                 color: white;
                 border: white solid 2px;
 
                 .anticon svg {
                     transform: rotate(90deg);
-                    color: #14e4d6;
+                    color: var(--brightCyan);
                 }
             }
 
             &:focus {
-                background-color: #e31b6d;
+                background-color: var(--pink);
                 color: white;
                 border: white solid 2px;
 
                 
                 .anticon svg {
                     transform: rotate(90deg);
-                    color: #14e4d6;
+                    color: var(--brightCyan);
                 }
             }
         }
@@ -144,11 +144,11 @@
                     font-weight: bold;
 
                     &:hover {
-                        color: #e31b6d
+                        color: var(--pink)
                     }
 
                     &.active {
-                        color: #e31b6d;
+                        color: var(--pink);
                     }
                 }
             }
@@ -172,7 +172,7 @@
                     animation-duration: 1s;
 
                     &:hover {
-                        color: #e31b6d
+                        color: var(--pink)
                     }
                 }
                 
@@ -213,11 +213,11 @@
                             visibility: visible;
 
                             &:hover {
-                                color: #e31b6d
+                                color: var(--pink)
                             }
         
                             &.active {
-                                color: #e31b6d;
+                                color: var(--pink);
                             }
                         }
                     }
@@ -233,5 +233,5 @@
 
         @keyframes cursor {
             from, to { border-color: transparent }
-            50% { border-color: #e31b6d }
+            50% { border-color: var(--pink) }
         }

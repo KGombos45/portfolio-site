@@ -93,7 +93,7 @@
                     padding: 10px;
                     font-size: 22px;
                     font-weight: bold;
-                    color: #14e4d6;
+                    color: var(--brightCyan);
 
                     p {
                         font-size: 12px;
@@ -107,7 +107,7 @@
                 }
 
                 .view-btn {
-                    background: #e31b6d;
+                    background: var(--pink);
                     border-radius: 40px;
                     width: 165px;
                     height: 46px;
@@ -120,8 +120,8 @@
                     left: 30%;
     
                     &:hover, :focus {
-                        background: #14e4d6;
-                        color: #e31b6d;
+                        background: var(--brightCyan);
+                        color: var(--pink);
                     }
                 }
             }

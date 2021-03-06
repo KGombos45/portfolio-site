@@ -20,7 +20,7 @@
     padding-top: 25px;
     font-size: 16px;
     font-weight: bold;
-    color: #e31b6d;
+    color: var(--pink);
 }
 
 
@@ -74,13 +74,13 @@
         transition: color 0.5s;
 
         &:hover {
-            background: #e31b6d;
+            background: var(--pink);
             color: white;
             border-color: white;
         }
 
         &:focus {
-            background: #e31b6d;
+            background: var(--pink);
             color: white;
             border-color: white;
             outline: none;
