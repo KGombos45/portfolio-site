@@ -6,31 +6,32 @@ import { MenuOutlined, CloseOutlined } from '@ant-design/icons';
 
 function Navbar() {
 
-    const [navBarMobile, setVisibility] = useState(false);   
+    const [navBarMobile, setMobile] = useState(false);
+    const [showHidenNavbar, setShowHide] = useState(false); 
+    const [stickyNavBar, setSticky] = useState(false);  
 
     const showNavBar = () => {
-        var navbar = document.getElementById("navbar");  
+
         var home = document.getElementById("home");
 
-        if (window.scrollY > 1 && window.scrollY <= home.clientHeight && navbar.classList.contains("hidden")) {
-            navbar.classList.remove("hidden");
-        } else if (window.scrollY >= home.clientHeight && !navbar.classList.contains("hidden")) {
-            navbar.classList.add("sticky");
-        } else if (window.scrollY <= home.clientHeight && navbar.classList.contains("sticky")) {
-            navbar.classList.remove("sticky");
-            navbar.classList.add("hidden");
+        if (window.scrollY > 1 && window.scrollY <= home.clientHeight) {
+            setShowHide(false);
+            setSticky(false);
+        } else if (window.scrollY >= home.clientHeight) {
+            setSticky(true);
+            setShowHide(false);
         } 
 
     };
 
     const handleClick = () => {
-        setVisibility(!navBarMobile)
+        setMobile(!navBarMobile)
     };
 
     window.addEventListener('scroll', showNavBar);
 
     return (
-        <nav className="flex navMenu hidden" id="navbar">
+        <nav className={stickyNavBar ? "flex navMenu sticky" : showHidenNavbar ? "flex navMenu hidden" : "flex navMenu" } id="navbar">
         <div className="hamburger-icon-container" onClick={handleClick}>
             { !navBarMobile ? <MenuOutlined/> : null }
             { navBarMobile ? <CloseOutlined /> : null }
