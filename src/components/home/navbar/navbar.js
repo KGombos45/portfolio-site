@@ -12,12 +12,10 @@ function Navbar() {
 
     const showNavBar = () => {
 
-        var home = document.getElementById("home");
-
-        if (window.scrollY > 1 && window.scrollY <= home.clientHeight) {
+        if (window.scrollY > 1 && window.scrollY <= window.screen.height) {
             setShowHide(false);
             setSticky(false);
-        } else if (window.scrollY >= home.clientHeight) {
+        } else if (window.scrollY >= window.screen.height) {
             setSticky(true);
             setShowHide(false);
         } 
