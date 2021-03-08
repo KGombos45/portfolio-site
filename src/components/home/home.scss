@@ -45,6 +45,12 @@
             animation: fadeIn;
             animation-duration: 2s;
 
+            @media screen and (max-width: 600px) { 
+
+                font-size: 26px;
+
+            }
+
             .highlight {
                 color: var(--pink);
             }
@@ -63,6 +69,12 @@
             z-index: 99;
             animation: fadeIn;
             animation-duration: 2s;
+
+            @media screen and (max-width: 600px) {
+                font-size: 14px;
+                width: 185px;
+            }
+            
 
             a {
                 color: white;
@@ -226,12 +238,3 @@
             }
         }
 
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-
-        @keyframes cursor {
-            from, to { border-color: transparent }
-            50% { border-color: var(--pink) }
-        }
