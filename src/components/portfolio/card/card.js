@@ -55,8 +55,8 @@ function Card() {
         },
         {
             "src": "bugtracker.mp4",
-            "svg": "bugtracker.svg",
-            "cardTitle": "Bugtracker",
+            "svg": "agileteams.svg",
+            "cardTitle": "AgileTeams",
             "cardSubtitle": "Angular/Typescript/HTML/Angular Material/SCSS/C#",
             "cardBody": "A full-stack website built off of .Net Core/C# with Microsoft SQL Server for the back-end. Front-end utilizes Angular 7, Angular Material, HTML, and SCSS."
         }
