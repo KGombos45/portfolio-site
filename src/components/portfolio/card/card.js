@@ -30,7 +30,7 @@ function Card() {
 
     const Data = [
         {
-            "src": "uhone-main.mp4",
+            "src": "uhone.mp4",
             "svg": "uhone.svg",
             "cardTitle": "UHOne",
             "cardSubtitle": "Javascript/JQuery/HTML/Less/AEM",
@@ -38,7 +38,7 @@ function Card() {
             "link": "https://www.uhone.com/"
         },
         {
-            "src": "uhone-shop-main.mp4",
+            "src": "uhone-shop.mp4",
             "svg": "uhone-shop.svg",
             "cardTitle": "UHOne Shop",
             "cardSubtitle": "AngularJS/Javascript/HTML/Bootstrap/SCSS/C#",
@@ -54,7 +54,7 @@ function Card() {
             "link": "https://kgombos45.github.io/portfolio-site/"
         },
         {
-            "src": "bugtracker.mp4",
+            "src": "agileteams.mp4",
             "svg": "agileteams.svg",
             "cardTitle": "AgileTeams",
             "cardSubtitle": "Angular/Typescript/HTML/Angular Material/SCSS/C#",
