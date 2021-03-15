@@ -51,14 +51,15 @@ function Card() {
             "cardTitle": "Portfolio",
             "cardSubtitle": "React.js/Javascript/HTML/SCSS",
             "cardBody": "My portfolio site built from the ground up using the React.js framework, Javascript, and basic HTML and SCSS styling.",
-            "link": "https://kgombos45.github.io/portfolio-site/"
+            "link": "https://helloimkevingombos.com"
         },
         {
             "src": "agileteams.mp4",
             "svg": "agileteams.svg",
             "cardTitle": "AgileTeams",
             "cardSubtitle": "Angular/Typescript/HTML/Angular Material/SCSS/C#",
-            "cardBody": "A full-stack website built off of .Net Core/C# with Microsoft SQL Server for the back-end. Front-end utilizes Angular 7, Angular Material, HTML, and SCSS."
+            "cardBody": "A full-stack website built off of .Net Core/C# with Microsoft SQL Server for the back-end. Front-end utilizes Angular 7, Angular Material, HTML, and SCSS.",
+            "link": "https://agileteams.dev"
         }
     ];
 
