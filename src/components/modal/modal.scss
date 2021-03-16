@@ -76,6 +76,24 @@
                     padding-bottom: 12px;
                     border-bottom: 1px #9696967d solid;
 
+                    .repo-btn {
+                        background: var(--mediumCyan);
+                        border-radius: 40px;
+                        width: auto;
+                        height: 36px;
+                        font-size: 14px;
+                        border: 2px var(--mediumCyan) solid;
+                        transition: all 0.5s;
+                        color: white;
+                        margin: 10px 10px 5px 0;
+    
+                        &:hover,
+                        :focus {
+                            background: transparent;
+                            color: var(--mediumCyan);
+                        }
+                    }
+
                     @media only screen and (max-width:450px) {
                         font-size: 14px;
                     }
@@ -95,11 +113,12 @@
                 .viewSite-btn {
                     background: var(--pink);
                     border-radius: 40px;
-                    width: 165px;
-                    height: 46px;
+                    width: auto;
+                    height: 42px;
                     font-size: 16px;
-                    border: 2px white solid;
-                    transition: color 0.5s;
+                    border: 2px var(--pink) solid;
+                    transition: all 0.5s;
+                    margin: 0 10px 0 0;
 
                     &:hover,
                     :focus {
@@ -111,16 +130,20 @@
                 .exit-icon {
                     background: var(--pink);
                     cursor: pointer;
-                    height: 46px;
-                    width: 46px;
+                    height: 42px;
+                    width: 42px;
                     position: relative;
                     text-align: center;
                     color: white;
-                    font-size: 28px;
-                    transition: color 0.5s;
+                    font-size: 24px;
+                    transition: all 0.5s;
                     border-radius: 40px;
-                    border: 2px white solid;
+                    border: 2px var(--pink) solid;
                     float: right;
+
+                    .anticon {
+                        vertical-align: -0.15em;
+                    }
 
                     &:hover,
                     :focus {

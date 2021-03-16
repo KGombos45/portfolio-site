@@ -35,14 +35,16 @@ function Card() {
             "cardTitle": "UHOne",
             "cardSubtitle": "Javascript/JQuery/HTML/Less/AEM",
             "cardBody": "I was brought on to assist with this project, where our marketing team was working to rebuild our UHOne site as well as convert it from Sitecore to Adobe Experience Manager (AEM).",
+            "modalBody": "The above video highlights many of the features I helped implement on the rework of UHOne.com. These incldue the header component, footer component, and several cards/carousel components.",
             "link": "https://www.uhone.com/"
         },
         {
             "src": "uhone-shop.mp4",
             "svg": "uhone-shop.svg",
             "cardTitle": "UHOne Shop",
-            "cardSubtitle": "AngularJS/Javascript/HTML/Bootstrap/SCSS/C#",
-            "cardBody": "UHOne Shop is a full-stack website built off of .Net Core/C# with Microsoft SQL Server for the back-end. Front-end utilizes AngularJS, Javascript, custom Boostrap components, HTML, and SCSS.",
+            "cardSubtitle": "AngularJS/Javascript/HTML/Bootstrap/SCSS/C#/SQLServer",
+            "cardBody": "UHOne Shop is a full-stack website built off of ASP.NET Core/C# with Microsoft SQL Server for the back-end. Front-end utilizes AngularJS, Javascript, custom Boostrap components, HTML, and SCSS.",
+            "modalBody": "The above video highlights some of the key features I've worked on within UHOne Shop, these include the compare tool, add to cart highlight feature, ACA Landing page, and much more.",
             "link": "https://www.uhone.com/shop"
         },
         {
@@ -51,15 +53,20 @@ function Card() {
             "cardTitle": "Portfolio",
             "cardSubtitle": "React.js/Javascript/HTML/SCSS",
             "cardBody": "My portfolio site built from the ground up using the React.js framework, Javascript, and basic HTML and SCSS styling.",
-            "link": "https://helloimkevingombos.com"
+            "modalBody": "Purpose of this portfolio app is to demonstrate strong front end and UI/UX capabilities. The full static app is hosted via GitHub Pages.",
+            "link": "https://helloimkevingombos.com",
+            "repositoryLink": "https://github.com/KGombos45/portfolio-site"
         },
         {
             "src": "agileteams.mp4",
             "svg": "agileteams.svg",
             "cardTitle": "AgileTeams",
-            "cardSubtitle": "Angular/Typescript/HTML/Angular Material/SCSS/C#",
-            "cardBody": "A full-stack website built off of .Net Core/C# with Microsoft SQL Server for the back-end. Front-end utilizes Angular 7, Angular Material, HTML, and SCSS.",
-            "link": "https://agileteams.dev"
+            "cardSubtitle": "Angular/Typescript/HTML/Angular Material/SCSS/C#/SQLServer",
+            "cardBody": "A full-stack website built off of ASP.NET Core/C# with Microsoft SQL Server for the back-end. Front-end utilizes Angular 7, Angular Material, HTML, and SCSS.",
+            "modalBody": "The purpose of this app is to be a demonstration of full-stack development capabilities. AgileTeams is a software platform offering small teams all the way to enterprises a way to collaborate, communicate, and track the overall progress of project lifecycles. AgileTeams API is hosted on Azure Web App Services, and the database is hosted on Azure SQL Serve; the front-end is a static site hosted on GitHub Pages.",
+            "link": "https://agileteams.dev",
+            "backEndRepositoryLink": "https://github.com/KGombos45/AgileTeamsBE",
+            "frontEndRepositoryLink": "https://github.com/KGombos45/AgileTeamsFE"
         }
     ];
 
