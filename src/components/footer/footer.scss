@@ -18,7 +18,7 @@ footer {
         top: -28px;
         position: relative;
         cursor: pointer;
-        transition: color 0.5s;
+        transition: all 0.5s;
         border-radius: 40px;
         border: 2px white solid;
 
@@ -43,7 +43,7 @@ footer {
         text-align: center;
         color: var(--pink);
         font-size: 24px;
-        transition: color 0.5s;
+        transition: all 0.5s;
         margin: 10px 10px;
         border-radius: 40px;
         border: 2px var(--pink) solid;
