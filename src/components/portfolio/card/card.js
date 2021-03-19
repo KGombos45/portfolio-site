@@ -67,7 +67,19 @@ function Card() {
             "link": "https://agileteams.dev",
             "backEndRepositoryLink": "https://github.com/KGombos45/AgileTeamsBE",
             "frontEndRepositoryLink": "https://github.com/KGombos45/AgileTeamsFE"
+        },
+        {
+            "src": "indiecoffee.mp4",
+            "svg": "indiecoffee.svg",
+            "cardTitle": "Indie Coffee Roasters",
+            "cardSubtitle": "React.js/Javascript/HTML/SCSS",
+            "cardBody": "A recreation with my own touch of my favorite local coffee shop's website using React.js, Javascript, and basic HTML and SCSS styling",
+            "modalBody": "The purpose of this app is to demonstrate when given a template, or design, I can recreate that design for the web. I achieve that using my favorite local coffee shop, Indie Coffee Roaster's, website where I spend most of my time doing my work.",
+            "link": "https://indiecoffeeroasters.dev",
+            "originalLink": "https://www.indiecoffeeroasters.com/",
+            "repositoryLink": "https://github.com/KGombos45/coffee-shop"
         }
+
     ];
 
 

@@ -49,6 +49,7 @@ export const Modal = ({ show, closeModal, data }) => {
                             <PerfectScrollbar>
                                 <p>{data.cardBody}</p>
                                 <p>{data.modalBody}</p>
+                                { data.originalLink && <p>Click here to view <a href={data.originalLink} target="_blank" rel="noreferrer">Indie Coffee Roaster's Website</a>, the inspiration for the recreation.</p> }
                             </PerfectScrollbar>
                         </div>
                         <div className="modal-footer">
