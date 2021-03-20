@@ -12,14 +12,14 @@
             width: 100vw;
             left: 0;
             top: 0;
-            position: fixed;
+            position: absolute;
 
             .particles {
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
-                background: rgb(95,7,162);
-                background: linear-gradient(222deg, rgba(95,7,162,1) 0%, rgba(184,25,122,1) 100%);                
+                background: rgb(63,2,108);
+                background: linear-gradient(222deg, rgba(63,2,108,1) 15%, rgba(227,27,109,0.8939950980392157) 100%);
             }
             
             video {
@@ -119,7 +119,7 @@
         }
 
         .navMenu {
-            bottom: -103px;
+            bottom: -53px;
             left: 0;
             position: absolute;
             background: #00181d;
@@ -129,10 +129,6 @@
             width: 100%;
             z-index: 99;
             flex-direction: row;
-
-            @media screen and (max-width: 480px) {
-                bottom: -108px;
-            }
 
             &.hidden {
                 visibility: hidden;

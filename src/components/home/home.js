@@ -17,7 +17,7 @@ function AppHome() {
                     params={{
                         "particles": {
                             "number": {
-                                "value": 40,
+                                "value": 60,
                                 "density": {
                                     "enable": true,
                                     "value_area": 800
