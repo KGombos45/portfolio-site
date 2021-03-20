@@ -4,7 +4,6 @@ import { Button } from 'antd';
 import { ArrowRightOutlined } from '@ant-design/icons';
 import { Link } from 'react-scroll';
 import Navbar from './navbar/navbar';
-import Particles from 'react-particles-js';
 
 
 function AppHome() {

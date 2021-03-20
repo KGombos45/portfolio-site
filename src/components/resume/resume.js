@@ -10,7 +10,7 @@ import WorkTimeline from './work-timeline/work-timeline';
 function AppResume() {
     return (
 
-        <section className="resume-section" id="resume">
+        <section className="resume" id="resume">
             <div className="body-container flex">
                 <ScrollAnimation animateIn='slideInLeft' initiallyVisible={false} animateOnce={true} duration={1}>
                     <div className="section-title">
