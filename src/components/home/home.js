@@ -12,8 +12,8 @@ function AppHome() {
         <section className="home flex" id="home">
 
             <div className="video-container">
-                {/* <video src="video.mp4" autoPlay muted loop></video> */}
-                <Particles className="particles"
+                <video src="video.mp4" autoPlay muted loop></video>
+                {/* <Particles className="particles"
                     params={{
                         "particles": {
                             "number": {
@@ -62,7 +62,7 @@ function AppHome() {
                                 }
                             }
                         }
-                    }} />
+                    }} /> */}
             </div>
 
             <div className="flex">

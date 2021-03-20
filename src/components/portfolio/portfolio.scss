@@ -4,9 +4,7 @@
     width: 100vw;
     display: block;
     font-family: "Raleway", sans-serif;
-    background: #dbf0f1;
     padding: 100px 0 100px 0;
-    position: relative;
 
     .section-title {
         font-size: 34px;
@@ -40,6 +38,10 @@
                 text-align: center;
             }
 
+            .view-btn {
+                visibility: hidden;
+            }
+
             &.card-item-container:hover .card-item {
                 
 
@@ -57,7 +59,9 @@
                         animation-duration: 1s;
                     }
 
-                
+                    .view-btn {
+                        visibility: visible;
+                    }                
                 
               }
 
@@ -86,9 +90,7 @@
             }
 
             .card-back {
-                //background: #042b33;
-                background: rgb(63,2,108);
-                background: linear-gradient(222deg, rgba(63,2,108,1) 15%, rgba(227,27,109,0.8939950980392157) 100%);
+                background: #042b33;
                 text-align: center;
                 visibility: hidden;
 
