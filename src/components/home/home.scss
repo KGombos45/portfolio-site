@@ -130,6 +130,10 @@
             z-index: 99;
             flex-direction: row;
 
+            @media screen and (max-width: 480px) {
+                bottom: -108px;
+            }
+
             &.hidden {
                 visibility: hidden;
             }
