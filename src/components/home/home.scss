@@ -17,6 +17,7 @@
             .particles {
                 height: 100%;
                 width: 100%;
+                object-fit: cover;
                 background: rgb(95,7,162);
                 background: linear-gradient(222deg, rgba(95,7,162,1) 0%, rgba(184,25,122,1) 100%);                
             }
@@ -118,7 +119,7 @@
         }
 
         .navMenu {
-            bottom: -53px;
+            bottom: -100px;
             left: 0;
             position: absolute;
             background: #00181d;
@@ -136,8 +137,8 @@
             &.sticky {
                 position: fixed;
                 top: 0;
+                left: 0;
                 width: 100%;
-                bottom: -53px;
 
                 animation: slideInDown; 
                 animation-duration: .6s; 
