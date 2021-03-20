@@ -86,7 +86,9 @@
             }
 
             .card-back {
-                background: #042b33;
+                //background: #042b33;
+                background: rgb(63,2,108);
+                background: linear-gradient(222deg, rgba(63,2,108,1) 15%, rgba(227,27,109,0.8939950980392157) 100%);
                 text-align: center;
                 visibility: hidden;
 
