@@ -4,13 +4,14 @@ import { Button } from 'antd';
 import { MailOutlined } from '@ant-design/icons';
 import { Link } from 'react-scroll';
 import ScrollAnimation from 'react-animate-on-scroll';
+import me from '../../../assets/img/me.jfif';
 
 
 function AboutMe() {
     return (
         <div className="flex section-about">
         <ScrollAnimation animateIn='slideInLeft' initiallyVisible={false} animateOnce={true} duration={1}>
-            <img src="me.jfif" alt="Profile Picture"></img>
+            <img src={me} alt="Profile Picture"></img>
             <div className="section-sub-header">
                 About Me
                 <div className="section-title-underline sub-header-underline" />

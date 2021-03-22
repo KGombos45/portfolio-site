@@ -3,7 +3,7 @@ import './footer.scss';
 import { LinkedinOutlined, GithubOutlined, InstagramOutlined, UpCircleOutlined } from '@ant-design/icons';
 
 
-function AppFooter() {
+function FooterSection() {
 
 const scrollToTop = () => {
     window.scrollTo({top: 0, behavior: 'smooth'});
@@ -45,4 +45,4 @@ const scrollToTop = () => {
     )
 }
 
-export default AppFooter
+export default FooterSection

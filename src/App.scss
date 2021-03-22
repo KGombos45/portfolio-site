@@ -20,6 +20,12 @@ body {
   flex-direction: row;
 }
 
+.animate {
+  .slideInLeft, .slideInRight {
+    transition: all .01s ease-in-out;
+  }
+}
+
 .section-title-underline {
   height: 5px;
   width: 65px;

@@ -1,11 +1,12 @@
 import React from 'react';
 import './about.scss';
 import ScrollAnimation from 'react-animate-on-scroll';
-import AboutMe from './aboutme/aboutme';
-import Skills from './skills/skills';
+import AboutMe from './aboutme/AboutMe';
+import Skills from './skills/Skills';
 
 
-function AppAbout() {
+
+function AboutSection() {
     
     return (
 
@@ -32,4 +33,4 @@ function AppAbout() {
     )
 }
 
-export default AppAbout;
+export default AboutSection;

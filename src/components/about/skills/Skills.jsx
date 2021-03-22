@@ -1,53 +1,62 @@
 import React from 'react'
 import './../about.scss';
 import ScrollAnimation from 'react-animate-on-scroll';
+import angularImg from '../../../assets/img/angular.png';
+import reactImg from '../../../assets/img/react.svg';
+import javascriptImg from '../../../assets/img/javascript.svg';
+import typescriptImg from '../../../assets/img/typescript.svg';
+import jqueryImg from '../../../assets/img/jquery.png';
+import htmlImg from '../../../assets/img/html5.png';
+import cssImg from '../../../assets/img/css3.png';
+import sqlServerImg from '../../../assets/img/sqlserver.svg';
+import oracleImg from '../../../assets/img/oracle.svg';
 
 
 function Skills() {
 
     const Data = [
         {
-            "src": "angular.png",
+            "src": angularImg,
             "alt": "Angular",
             "text": "Angular and AngularJS"
         },
         {
-            "src": "react.svg",
+            "src": reactImg,
             "alt": "React.js",
             "text": "React.js"
         },
         {
-            "src": "javascript.svg",
+            "src": javascriptImg,
             "alt": "Javascript",
             "text": "Javascript"
         },
         {
-            "src": "typescript.svg",
+            "src": typescriptImg,
             "alt": "Typescript",
             "text": "Typescript"
         },
         {
-            "src": "jquery.png",
+            "src": jqueryImg,
             "alt": "JQuery",
             "text": "JQuery"
         },
         {
-            "src": "html5.png",
+            "src": htmlImg,
             "alt": "HTML5",
             "text": "HTML5"
         },
         {
-            "src": "css3.png",
+            "src": cssImg,
             "alt": "CSS3",
             "text": "CSS3"
         },
         {
-            "src": "sqlserver.svg",
+            "src": sqlServerImg,
             "alt": "SQLServer",
             "text": "MS SQLServer"
         },
         {
-            "src": "oracle.svg",
+            "src": oracleImg,
             "alt": "Oracle",
             "text": "Oracle"
         }

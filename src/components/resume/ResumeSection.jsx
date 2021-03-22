@@ -3,11 +3,12 @@ import './resume.scss';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { Button } from 'antd';
 import { DownloadOutlined } from '@ant-design/icons';
-import EducationTimeline from './education-timeline/education-timeline';
-import WorkTimeline from './work-timeline/work-timeline';
+import EducationTimeline from './education-timeline/EducationTimeline';
+import WorkTimeline from './work-timeline/WorkTimeline';
 
 
-function AppResume() {
+
+function ResumeSection() {
     return (
 
         <section className="resume" id="resume">
@@ -35,4 +36,4 @@ function AppResume() {
     )
 }
 
-export default AppResume
+export default ResumeSection

@@ -5,7 +5,18 @@ import "animate.css/animate.compat.css";
 import ScrollAnimation from 'react-animate-on-scroll';
 import { ArrowRightOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
-import Modal from '../../modal/modal';
+import Modal from '../../modal/Modal';
+
+import uhoneVideo from '../../../assets/video/uhone.mp4';
+import uhoneImg from '../../../assets/img/uhone.svg';
+import uhoneShopVideo from '../../../assets/video/uhone-shop.mp4';
+import uhoneShopImg from '../../../assets/img/uhone-shop.svg';
+import portfolioVideo from '../../../assets/video/portfolio.mp4';
+import portfolioImg from '../../../assets/img/portfolio.svg';
+import agileTeamsVideo from '../../../assets/video/agileteams.mp4';
+import agileTeamsImg from '../../../assets/img/agileteams.svg';
+import indieCoffeeVideo from '../../../assets/video/indiecoffee.mp4';
+import indieCoffeeImg from '../../../assets/img/indiecoffee.svg';
 
 function Card() {
 
@@ -30,8 +41,8 @@ function Card() {
 
     const Data = [
         {
-            "src": "uhone.mp4",
-            "svg": "uhone.svg",
+            "src": uhoneVideo,
+            "svg": uhoneImg,
             "cardTitle": "UHOne",
             "cardSubtitle": "Javascript/JQuery/HTML/Less/AEM",
             "cardBody": "I was brought on to assist with this project, where our marketing team was working to rebuild our UHOne site as well as convert it from Sitecore to Adobe Experience Manager (AEM).",
@@ -39,8 +50,8 @@ function Card() {
             "link": "https://www.uhone.com/"
         },
         {
-            "src": "uhone-shop.mp4",
-            "svg": "uhone-shop.svg",
+            "src": uhoneShopVideo,
+            "svg": uhoneShopImg,
             "cardTitle": "UHOne Shop",
             "cardSubtitle": "AngularJS/Javascript/HTML/Bootstrap/SCSS/C#/SQLServer",
             "cardBody": "UHOne Shop is a full-stack website built off of ASP.NET Core/C# with Microsoft SQL Server for the back-end. Front-end utilizes AngularJS, Javascript, custom Boostrap components, HTML, and SCSS.",
@@ -48,8 +59,8 @@ function Card() {
             "link": "https://www.uhone.com/shop"
         },
         {
-            "src": "portfolio.mp4",
-            "svg": "portfolio.svg",
+            "src": portfolioVideo,
+            "svg": portfolioImg,
             "cardTitle": "Portfolio",
             "cardSubtitle": "React.js/Javascript/HTML/SCSS",
             "cardBody": "My portfolio site built from the ground up using the React.js framework, Javascript, and basic HTML and SCSS styling.",
@@ -58,8 +69,8 @@ function Card() {
             "repositoryLink": "https://github.com/KGombos45/portfolio-site"
         },
         {
-            "src": "agileteams.mp4",
-            "svg": "agileteams.svg",
+            "src": agileTeamsVideo,
+            "svg": agileTeamsImg,
             "cardTitle": "AgileTeams",
             "cardSubtitle": "Angular/Typescript/HTML/Angular Material/SCSS/C#/SQLServer",
             "cardBody": "A full-stack website built off of ASP.NET Core/C# with Microsoft SQL Server for the back-end. Front-end utilizes Angular 7, Angular Material, HTML, and SCSS.",
@@ -69,8 +80,8 @@ function Card() {
             "frontEndRepositoryLink": "https://github.com/KGombos45/AgileTeamsFE"
         },
         {
-            "src": "indiecoffee.mp4",
-            "svg": "indiecoffee.svg",
+            "src": indieCoffeeVideo,
+            "svg": indieCoffeeImg,
             "cardTitle": "Indie Coffee Roasters",
             "cardSubtitle": "React.js/Javascript/HTML/SCSS",
             "cardBody": "A recreation with my own touch of my favorite local coffee shop's website using React.js, Javascript, and basic HTML and SCSS styling",

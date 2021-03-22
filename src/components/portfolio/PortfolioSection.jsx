@@ -1,9 +1,9 @@
 import React from 'react'
 import './portfolio.scss';
 import ScrollAnimation from 'react-animate-on-scroll';
-import Card from './card/card';
+import Card from './card/Card';
 
-function AppPortfolio() {
+function PortfolioSection() {
     return (
 
         <section className="portfolio" id="portfolio">
@@ -25,4 +25,4 @@ function AppPortfolio() {
     )
 }
 
-export default AppPortfolio
+export default PortfolioSection

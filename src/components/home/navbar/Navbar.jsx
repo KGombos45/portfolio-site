@@ -3,6 +3,7 @@ import './../home.scss';
 import { useState } from 'react';
 import { Link } from 'react-scroll';
 import { MenuOutlined, CloseOutlined } from '@ant-design/icons';
+import logo from '../../../assets/img/logo.svg';
 
 function Navbar() {
 
@@ -31,7 +32,7 @@ function Navbar() {
     return (
         <nav className={stickyNavBar ? "flex navMenu sticky" : showHidenNavbar ? "flex navMenu hidden" : "flex navMenu"} id="navbar">
             <div className="logo">
-                <img src="logo.svg"></img>
+                <img src={logo}></img>
             </div>
             <div className="hamburger-icon-container" onClick={handleClick}>
                 {!navBarMobile ? <MenuOutlined /> : null}

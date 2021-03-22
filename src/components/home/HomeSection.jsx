@@ -3,30 +3,32 @@ import './home.scss';
 import { Button } from 'antd';
 import { ArrowRightOutlined } from '@ant-design/icons';
 import { Link } from 'react-scroll';
-import Navbar from './navbar/navbar';
+import Navbar from './navbar/Navbar';
+import Particles from 'react-particles-js';
+//import backgroundVideo from '../../assets/video/video.mp4';
 
 
-function AppHome() {
+function HomeSection() {
     return (
         <section className="home flex" id="home">
 
             <div className="video-container">
-                <video src="video.mp4" autoPlay muted loop></video>
-                {/* <Particles className="particles"
+                {/* <video src={backgroundVideo} autoPlay muted loop></video> */}
+                <Particles className="particles"
                     params={{
                         "particles": {
                             "number": {
-                                "value": 60,
+                                "value": 40,
                                 "density": {
                                     "enable": true,
-                                    "value_area": 800
+                                    "value_area": 1200
                                 }
                             },
                             "size": {
                                 "value": 3,
                                 "random": true,
                                 "anim": {
-                                    "enable": false,
+                                    "enable": true,
                                     "speed": 25,
                                     "size_min": 0.1,
                                     "sync": false
@@ -40,9 +42,9 @@ function AppHome() {
                             },
                             "move": {
                                 "enable": true,
-                                "speed": 6,
+                                "speed": 3,
                                 "direction": "none",
-                                "random": false,
+                                "random": true,
                                 "straight": false,
                                 "out_mode": "out",
                                 "bounce": false,
@@ -61,7 +63,8 @@ function AppHome() {
                                 }
                             }
                         }
-                    }} /> */}
+                    }}
+                     />
             </div>
 
             <div className="flex">
@@ -82,4 +85,4 @@ function AppHome() {
     )
 }
 
-export default AppHome;
+export default HomeSection;
