@@ -24,7 +24,6 @@
                 -webkit-backface-visibility: hidden;
                 -webkit-perspective: 1000;
                 -webkit-transform: translate3d(0, 0, 0);
-                position: fixed;
             }
             
             // video {
@@ -124,7 +123,7 @@
         }
 
         .navMenu {
-            bottom: -100px;
+            bottom: -50px;
             left: 0;
             position: absolute;
             background: #00181d;
@@ -134,10 +133,6 @@
             width: 100%;
             z-index: 99;
             flex-direction: row;
-
-            @media screen and (max-width: 800px) {
-                bottom: -108px;
-            }
 
             &.hidden {
                 visibility: hidden;
