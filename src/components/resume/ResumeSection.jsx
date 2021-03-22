@@ -11,7 +11,7 @@ import WorkTimeline from './work-timeline/WorkTimeline';
 function ResumeSection() {
     return (
 
-        <section className="resume" id="resume">
+        <section className="resume-section" id="resume">
             <div className="body-container flex">
                 <ScrollAnimation animateIn='slideInLeft' initiallyVisible={false} animateOnce={true} duration={1}>
                     <div className="section-title">

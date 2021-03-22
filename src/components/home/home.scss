@@ -20,6 +20,11 @@
                 object-fit: cover;
                 background: rgb(4,43,51);
                 background: linear-gradient(222deg, rgba(4,43,51,1) 15%, rgba(227,27,109,0.8939950980392157) 100%);
+                will-change: transform;
+                -webkit-backface-visibility: hidden;
+                -webkit-perspective: 1000;
+                -webkit-transform: translate3d(0, 0, 0);
+                position: fixed;
             }
             
             // video {
@@ -119,7 +124,7 @@
         }
 
         .navMenu {
-            bottom: -50px;
+            bottom: -100px;
             left: 0;
             position: absolute;
             background: #00181d;
@@ -129,6 +134,10 @@
             width: 100%;
             z-index: 99;
             flex-direction: row;
+
+            @media screen and (max-width: 800px) {
+                bottom: -108px;
+            }
 
             &.hidden {
                 visibility: hidden;

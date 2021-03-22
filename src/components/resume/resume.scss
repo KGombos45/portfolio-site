@@ -1,10 +1,12 @@
 
-.resume {
+.resume-section {
     height: auto;
     width: 100vw;
     display: block;
     font-family: "Raleway", sans-serif;
     padding: 100px 0 100px 0;
+    position: relative;
+    background: white;
 
     .section-title {
         font-size: 34px;
