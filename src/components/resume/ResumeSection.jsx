@@ -5,6 +5,7 @@ import { Button } from 'antd';
 import { DownloadOutlined } from '@ant-design/icons';
 import EducationTimeline from './education-timeline/EducationTimeline';
 import WorkTimeline from './work-timeline/WorkTimeline';
+import resumeFile from '../../assets/Resume_KevinGombos.pdf';
 
 
 
@@ -26,10 +27,12 @@ function ResumeSection() {
                     <EducationTimeline />
                     <WorkTimeline />
                 </div>
-                <Button type="primary" className="view-btn">
-                    Download PDF
-                    <DownloadOutlined />
-                </Button>
+                <a href={resumeFile} target="_blank" rel="noopener noreferrer" download>
+                    <Button type="primary" className="view-btn">
+                        Download PDF
+                        <DownloadOutlined />
+                    </Button>
+                </a>
             </div>
 
         </section>

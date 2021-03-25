@@ -34,6 +34,7 @@ function EducationTimeline() {
                         <ul>
                             <li>Bachelor of Arts in Philosophy</li>
                             <li>Bachelor of Arts in Political Science</li>
+                            <li>Concentration in Greek Philosophy, Logic, and Foreign Affairs</li>
                         </ul>
 
                     </Timeline.Item>

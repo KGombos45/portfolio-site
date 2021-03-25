@@ -3,8 +3,8 @@ import './../about.scss';
 import ScrollAnimation from 'react-animate-on-scroll';
 import angularImg from '../../../assets/img/angular.png';
 import reactImg from '../../../assets/img/react.svg';
-import javascriptImg from '../../../assets/img/javascript.svg';
-import typescriptImg from '../../../assets/img/typescript.svg';
+import javaScriptImg from '../../../assets/img/javascript.svg';
+import typeScriptImg from '../../../assets/img/typescript.svg';
 import jqueryImg from '../../../assets/img/jquery.png';
 import htmlImg from '../../../assets/img/html5.png';
 import cssImg from '../../../assets/img/css3.png';
@@ -26,14 +26,14 @@ function Skills() {
             "text": "React.js"
         },
         {
-            "src": javascriptImg,
-            "alt": "Javascript",
-            "text": "Javascript"
+            "src": javaScriptImg,
+            "alt": "JavaScript",
+            "text": "JavaScript"
         },
         {
-            "src": typescriptImg,
-            "alt": "Typescript",
-            "text": "Typescript"
+            "src": typeScriptImg,
+            "alt": "TypeScript",
+            "text": "TypeScript"
         },
         {
             "src": jqueryImg,

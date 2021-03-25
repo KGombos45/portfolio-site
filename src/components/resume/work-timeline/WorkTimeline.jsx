@@ -14,17 +14,20 @@ function WorkTimeline() {
                 <Timeline>
                     <Timeline.Item>
                         <div className="work-text">
-                            United Healthcare
+                            United Healthcare/Optum Tech
                     </div>
                         <div className="timeframe-text">
                             January 2019 - Present
                     </div>
                         <ul>
-                            <li className="work-title">Full-stack Jr. Web Developer
+                            <li className="work-title">Associate Software Engineer
                             <ul>
-                                    <li>Helped build and develop a new front-end experience for UHOne</li>
-                                    <li>Developed new features for UHOne Shop</li>
-                                    <li>Helped maintain and debug any current issues on the UHOne Shop site</li>
+                                    <li>Helped rebuild the front-end/UI of UHOne.com and assisted the conversion from Sitecore to Adobe Experience Manager (AEM)</li>
+                                    <li>Implemented modern UI enhancements to UHOne.com/shop</li>
+                                    <li>Worked with AngularJS, ASP.NET Core, and Microsoft SQL Server</li>
+                                    <li>Extensive work with RESTful web API’s and large datasets</li>
+                                    <li>Assisted with the implementation of newly configured microservices</li>
+                                    <li>Worked with large and small dev teams in an Agile software development lifecycle</li>
                                 </ul>
                             </li>
                         </ul>

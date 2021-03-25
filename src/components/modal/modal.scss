@@ -76,6 +76,10 @@
                     padding-bottom: 12px;
                     border-bottom: 1px #9696967d solid;
 
+                    p {
+                        margin: 0;
+                    }
+
                     .repo-btn {
                         background: var(--mediumCyan);
                         border-radius: 40px;

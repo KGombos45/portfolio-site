@@ -21,7 +21,8 @@ export const Modal = ({ show, closeModal, data }) => {
                         <div className="modal-title">
                             {data.cardTitle}
                             <div className="modal-subtitle">
-                                {data.cardSubtitle}
+                                <p>{data.frontEndSubtitle}</p>
+                                <p>{data.backEndSubtitle}</p>
                                 <div className="repo-btns-wrapper">
                                 {data.repositoryLink && <a href={data.repositoryLink} target="_blank" rel="noreferrer">
                                         <Button type="primary" className="repo-btn">
