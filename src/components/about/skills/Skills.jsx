@@ -8,6 +8,9 @@ import typeScriptImg from '../../../assets/img/typescript.svg';
 import jqueryImg from '../../../assets/img/jquery.png';
 import htmlImg from '../../../assets/img/html5.png';
 import cssImg from '../../../assets/img/css3.png';
+import nodeJS from '../../../assets/img/node.png';
+import cSharp from '../../../assets/img/csharp.svg';
+import netCore from '../../../assets/img/netcore.png';
 import sqlServerImg from '../../../assets/img/sqlserver.svg';
 import oracleImg from '../../../assets/img/oracle.svg';
 
@@ -49,6 +52,21 @@ function Skills() {
             "src": cssImg,
             "alt": "CSS3",
             "text": "CSS3"
+        },
+        {
+            "src": nodeJS,
+            "alt": "Node.js",
+            "text": "Node.js"
+        },
+        {
+            "src": cSharp,
+            "alt": "C#",
+            "text": "C#"
+        },
+        {
+            "src": netCore,
+            "alt": ".Net Core",
+            "text": ".Net Core"
         },
         {
             "src": sqlServerImg,
