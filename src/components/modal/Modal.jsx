@@ -38,7 +38,7 @@ export const Modal = ({ show, closeModal, data }) => {
                                     </a>}
                                     {data.frontEndRepositoryLink && <a href={data.frontEndRepositoryLink} target="_blank" rel="noreferrer">
                                         <Button type="primary" className="repo-btn">
-                                            Font End Repository
+                                            Front End Repository
                                             <GithubOutlined />
                                         </Button>
                                     </a>}
