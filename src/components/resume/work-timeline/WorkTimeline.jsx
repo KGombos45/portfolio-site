@@ -20,12 +20,12 @@ function WorkTimeline() {
                             January 2019 - Present
                     </div>
                         <ul>
-                            <li className="work-title">Associate Software Engineer
+                            <li className="work-title">Software Engineer
                             <ul>
                                     <li>Helped rebuild the front-end/UI of UHOne.com and assisted the conversion from Sitecore to Adobe Experience Manager (AEM)</li>
-                                    <li>Implemented modern UI enhancements to UHOne.com/shop</li>
-                                    <li>Worked with AngularJS, ASP.NET Core, and Microsoft SQL Server</li>
-                                    <li>Extensive work with RESTful web API’s and large datasets</li>
+                                    <li>Implemented modern UI enhancements to UHOne.com/shop working alongside our UI/UX designer</li>
+                                    <li>Extensive work with AngularJS, ASP.NET Core, and Microsoft SQL Server</li>
+                                    <li>Experience working with RESTful web API’s and large datasets</li>
                                     <li>Assisted with the implementation of newly configured microservices</li>
                                     <li>Worked with large and small dev teams in an Agile software development lifecycle</li>
                                 </ul>
