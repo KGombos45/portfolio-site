@@ -1,6 +1,10 @@
 import {makeStyles} from '@material-ui/core';
 
 export const useContactStyles = makeStyles(theme => ({
+  contactSectionContainer: {
+    background: theme.palette.primary.main,
+    height: '750px',
+  },
   form: {
     maxWidth: '450px',
     width: '100%',

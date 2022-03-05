@@ -9,6 +9,22 @@ export const useAppStyles = makeStyles(theme => ({
     flexDirection: 'column',
     padding: theme.spacing(12.5, 0, 12.5, 0),
   },
+  mainButton: {
+    background: theme.palette.primary.contrastText,
+    color: 'white',
+    border: '2px solid white',
+    borderRadius: theme.spacing(5),
+    height: theme.spacing(5.75),
+    fontSize: theme.spacing(2),
+    maxWidth: '185px',
+    padding: theme.spacing(2),
+    transition: 'all 0.5s',
+    textTransform: 'none',
+    '&:hover, :focus': {
+      background: theme.palette.primary.light,
+      color: theme.palette.primary.contrastText,
+    },
+  },
   sectionDetailsContainer: {
     display: 'flex',
     flexDirection: 'row',

@@ -3,10 +3,11 @@ import {Box, Button, Card, Grid, Typography} from '@material-ui/core';
 import ScrollAnimation from 'react-animate-on-scroll';
 import {ArrowForwardSharp} from '../../assets';
 import {Image} from '../../base-components';
-import {useAppData, useCardStyles, useModal} from '../../hooks';
+import {useAppData, useAppStyles, useModal, usePortfolioCardStyles} from '../../hooks';
 
 export const PortfolioCard: React.FC = () => {
-  const {card, cardFront, cardBack, logo, mainButton, paragraph} = useCardStyles();
+  const {card, cardFront, cardBack, logo, paragraph} = usePortfolioCardStyles();
+  const {mainButton} = useAppStyles();
   const {handleOpenModal, modal} = useModal();
   const {cardData} = useAppData();
 

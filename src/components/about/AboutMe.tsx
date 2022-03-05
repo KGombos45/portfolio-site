@@ -6,8 +6,8 @@ import {Image, SectionTitles, SubHeader} from '../../base-components';
 import {useAboutStyles, useAppStyles} from '../../hooks';
 
 export const AboutMe: React.FC = () => {
-  const {mainButton, image, link} = useAboutStyles();
-  const {sectionHalfContainer, buttonIcon} = useAppStyles();
+  const {image, link} = useAboutStyles();
+  const {sectionHalfContainer, buttonIcon, mainButton} = useAppStyles();
 
   return (
     <Box className={sectionHalfContainer} display='flex'>

@@ -1,29 +1,11 @@
-import {Box, Button, makeStyles} from '@material-ui/core';
+import {Box, Button} from '@material-ui/core';
 import {GetApp, ResumePDF} from '../../assets';
 import {Section, SectionTitles} from '../../base-components';
 import {useAppData, useAppStyles} from '../../hooks';
 import {ResumeTimeline} from './ResumeTimeline';
 
-const useStyles = makeStyles(theme => ({
-  mainButton: {
-    background: theme.palette.primary.contrastText,
-    color: 'white !important',
-    borderRadius: theme.spacing(5),
-    height: theme.spacing(5.75),
-    fontSize: theme.spacing(2),
-    padding: theme.spacing(2),
-    transition: 'all 0.5s',
-    textTransform: 'none',
-    '&:hover, :focus': {
-      background: theme.palette.primary.light,
-      color: theme.palette.primary.contrastText,
-    },
-  },
-}));
-
 export const ResumeSection: React.FC = () => {
-  const {buttonIcon, link} = useAppStyles();
-  const {mainButton} = useStyles();
+  const {buttonIcon, link, mainButton} = useAppStyles();
   const {workData, educationData} = useAppData();
   return (
     <Section
