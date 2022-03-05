@@ -4,7 +4,7 @@ import {ToastContainer} from 'react-toastify';
 import {Section, SectionTitles} from '../../base-components';
 import {ContactForm} from './ContactForm';
 
-export const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(theme => ({
   contactSectionContainer: {
     background: theme.palette.primary.main,
     height: '750px',

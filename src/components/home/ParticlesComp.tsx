@@ -1,7 +1,7 @@
 import {makeStyles} from '@material-ui/core';
 import Particles from 'react-particles-js';
 
-export const useStyles = makeStyles(() => ({
+const useStyles = makeStyles(() => ({
   particles: {
     height: '100%',
     width: '100%',

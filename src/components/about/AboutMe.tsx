@@ -1,34 +1,12 @@
-import {Box, Button, Typography, makeStyles} from '@material-ui/core';
+import {Box, Button, Typography} from '@material-ui/core';
 import ScrollAnimation from 'react-animate-on-scroll';
 import {Link} from 'react-scroll';
 import {MailOutlineSharp, SelfieImage} from '../../assets';
 import {Image, SectionTitles, SubHeader} from '../../base-components';
-import {useAppStyles} from '../../hooks';
+import {useAboutStyles, useAppStyles} from '../../hooks';
 
-const useStyles = makeStyles(theme => ({
-  mainButton: {
-    background: theme.palette.primary.contrastText,
-    color: 'white',
-    borderRadius: theme.spacing(5),
-    height: theme.spacing(5.75),
-    fontSize: theme.spacing(2),
-    padding: theme.spacing(2),
-    transition: 'all 0.5s',
-    textTransform: 'none',
-    '&:hover, :focus': {
-      background: theme.palette.primary.light,
-      color: theme.palette.primary.contrastText,
-    },
-  },
-  image: {
-    height: '250px',
-    width: '250px',
-    borderRadius: '50%',
-  },
-}));
-
-export const AboutMe = () => {
-  const {mainButton, image} = useStyles();
+export const AboutMe: React.FC = () => {
+  const {mainButton, image, link} = useAboutStyles();
   const {sectionHalfContainer, buttonIcon} = useAppStyles();
 
   return (
@@ -39,11 +17,18 @@ export const AboutMe = () => {
         <Box>
           <Typography paragraph>
             Hello, my name is Kevin Gombos. I'm a full-stack web developer with 2+ years of
-            experience working at <a href='https://www.uhone.com/'>United Healthcare</a> and
-            <a href='https://www.optum.com/'> Optum Technology</a>. My primary focus and passion is
-            in front-end web development and UI/UX. I love to build apps that are not only visually
-            stimulating but also highly user friendly. I also hold three degrees in philosophy,
-            political science and my MS in Database Administration.
+            experience working at
+            <a className={link} href='https://www.uhone.com/'>
+              United Healthcare
+            </a>
+            and
+            <a className={link} href='https://www.optum.com/'>
+              Optum Technology
+            </a>
+            . My primary focus and passion is in front-end web development and UI/UX. I love to
+            build apps that are not only visually stimulating but also highly user friendly. I also
+            hold three degrees in philosophy, political science and my MS in Database
+            Administration.
           </Typography>
         </Box>
         <Link smooth duration={1000} to={SectionTitles.Contact}>

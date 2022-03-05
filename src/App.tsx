@@ -1,13 +1,15 @@
 import './App.scss';
 import 'animate.css/animate.compat.css';
 import {Box} from '@material-ui/core';
-import {AboutSection} from './components/about/AboutSection';
-import {ContactSection} from './components/contact/ContactSection';
-import {FooterSection} from './components/footer/FooterSection';
-import {HomeSection} from './components/home/HomeSection';
-import {PortfolioSection} from './components/portfolio/PortfolioSection';
-import {ResumeSection} from './components/resume/ResumeSection';
-import {Styling} from './components/theme';
+import {
+  AboutSection,
+  ContactSection,
+  FooterSection,
+  HomeSection,
+  PortfolioSection,
+  ResumeSection,
+} from './components';
+import {Styling} from './theme';
 
 export const App: React.FC = () => (
   <Box>

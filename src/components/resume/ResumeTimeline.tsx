@@ -8,8 +8,8 @@ import {
   TimelineSeparator,
 } from '@material-ui/lab';
 import ScrollAnimation from 'react-animate-on-scroll';
-import {SubHeader} from '../../../base-components';
-import {useAppStyles} from '../../../hooks';
+import {SubHeader} from '../../base-components';
+import {useAppStyles} from '../../hooks';
 
 type ListDataType = {
   location: string;

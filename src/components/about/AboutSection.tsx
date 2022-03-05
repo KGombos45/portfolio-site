@@ -1,4 +1,3 @@
-import React from 'react';
 import {Section, SectionTitles} from '../../base-components';
 import {AboutMe} from './AboutMe';
 import {Skills} from './Skills';

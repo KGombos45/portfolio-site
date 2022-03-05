@@ -7,7 +7,7 @@ import {CloseSharp, MenuSharp, SiteLogo} from '../../../assets';
 import {Image} from '../../../base-components';
 import {useAppData} from '../../../hooks';
 
-export const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   logo: {
     height: '40px',
     width: '40px',

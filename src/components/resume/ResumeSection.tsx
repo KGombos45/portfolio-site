@@ -2,7 +2,7 @@ import {Box, Button, makeStyles} from '@material-ui/core';
 import {GetApp, ResumePDF} from '../../assets';
 import {Section, SectionTitles} from '../../base-components';
 import {useAppData, useAppStyles} from '../../hooks';
-import {ResumeTimeline} from './timeline/ResumeTimeline';
+import {ResumeTimeline} from './ResumeTimeline';
 
 const useStyles = makeStyles(theme => ({
   mainButton: {
