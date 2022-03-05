@@ -1,9 +1,10 @@
 import './modal.scss';
 import 'animate.css/animate.compat.css';
 import 'react-perfect-scrollbar/dist/css/styles.css';
-import {Button} from '@material-ui/core';
+import {Box, Button} from '@material-ui/core';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import {CloseSharp, ExitToAppSharp, GitHub} from '../../assets';
+import {useAppStyles} from '../../hooks';
 import {type ModalDataType} from '../../hooks/useModal';
 
 type ModalProps = {
@@ -14,6 +15,7 @@ type ModalProps = {
 };
 
 export const Modal: React.FC<ModalProps> = ({isToggled, isClosing, modalData, close}) => {
+  const {link, mainButton, mainButtonRounded, secondaryButton, buttonIcon} = useAppStyles();
   if (isToggled && modalData !== undefined) {
     return (
       <div
@@ -34,26 +36,41 @@ export const Modal: React.FC<ModalProps> = ({isToggled, isClosing, modalData, cl
                 <p>{modalData.backEndSubtitle}</p>
                 <div className='repo-btns-wrapper'>
                   {modalData.repositoryLink && (
-                    <a href={modalData.repositoryLink} rel='noreferrer' target='_blank'>
-                      <Button className='repo-btn' type='button'>
+                    <a
+                      className={link}
+                      href={modalData.repositoryLink}
+                      rel='noreferrer'
+                      target='_blank'
+                    >
+                      <Button className={secondaryButton} type='button'>
                         View Repository
-                        <GitHub />
+                        <GitHub className={buttonIcon} />
                       </Button>
                     </a>
                   )}
                   {modalData.backEndRepositoryLink && (
-                    <a href={modalData.backEndRepositoryLink} rel='noreferrer' target='_blank'>
-                      <Button className='repo-btn' type='button'>
+                    <a
+                      className={link}
+                      href={modalData.backEndRepositoryLink}
+                      rel='noreferrer'
+                      target='_blank'
+                    >
+                      <Button className={secondaryButton} type='button'>
                         Back End Repository
-                        <GitHub />
+                        <GitHub className={buttonIcon} />
                       </Button>
                     </a>
                   )}
                   {modalData.frontEndRepositoryLink && (
-                    <a href={modalData.frontEndRepositoryLink} rel='noreferrer' target='_blank'>
-                      <Button className='repo-btn' type='button'>
+                    <a
+                      className={link}
+                      href={modalData.frontEndRepositoryLink}
+                      rel='noreferrer'
+                      target='_blank'
+                    >
+                      <Button className={secondaryButton} type='button'>
                         Front End Repository
-                        <GitHub />
+                        <GitHub className={buttonIcon} />
                       </Button>
                     </a>
                   )}
@@ -75,17 +92,17 @@ export const Modal: React.FC<ModalProps> = ({isToggled, isClosing, modalData, cl
                 )}
               </PerfectScrollbar>
             </div>
-            <div className='modal-footer'>
-              <a href={modalData.link} rel='noreferrer' target='_blank'>
-                <Button className='viewSite-btn' type='button'>
+            <Box className='modal-footer'>
+              <a className={link} href={modalData.link} rel='noreferrer' target='_blank'>
+                <Button className={mainButton} type='button'>
                   View Site
-                  <ExitToAppSharp />
+                  <ExitToAppSharp className={buttonIcon} />
                 </Button>
               </a>
-              <Button className='exit-icon' onClick={() => close()}>
+              <Button className={mainButtonRounded} onClick={() => close()}>
                 <CloseSharp />
               </Button>
-            </div>
+            </Box>
           </div>
         </div>
       </div>

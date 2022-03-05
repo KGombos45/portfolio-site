@@ -1,35 +1,36 @@
-import {Box, Button} from '@material-ui/core';
+import {Box, Button, Typography} from '@material-ui/core';
 import {ExpandLess} from '../../assets';
-import {useAppData} from '../../hooks';
-import './footer.scss';
+import {useAppData, useAppStyles, useFooterStyles} from '../../hooks';
 
 export const FooterSection: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({top: 0, behavior: 'smooth'});
   };
 
+  const {flexContainerColumnCenter, flexContainerRowCenter} = useAppStyles();
+  const {footer, scrollToTopButton, sitesButton, footnoteText, buttonIcon} = useFooterStyles();
   const {footerData} = useAppData();
 
   return (
-    <footer>
-      <div className='scroll-to-top-wrapper flex'>
-        <Button className='scroll-to-top' onClick={() => scrollToTop()}>
-          <ExpandLess />
+    <footer className={footer}>
+      <Box className={flexContainerColumnCenter}>
+        <Button className={scrollToTopButton} onClick={() => scrollToTop()}>
+          <ExpandLess className={buttonIcon} />
         </Button>
-      </div>
+      </Box>
 
-      <Box className='icon-wrapper flex row'>
+      <Box className={flexContainerRowCenter}>
         {footerData.map(item => (
           <a key={item.alt} href={item.src}>
-            <Button className='flex icon'>
+            <Button className={sitesButton}>
               <item.logo />
             </Button>
           </a>
         ))}
       </Box>
-      <div className='footnote-wrapper'>
-        <div className='footnote-text'>KEVIN GOMBOS ©2021</div>
-      </div>
+      <Box marginTop={3.125} width='100%'>
+        <Typography className={footnoteText}>KEVIN GOMBOS ©2021</Typography>
+      </Box>
     </footer>
   );
 };

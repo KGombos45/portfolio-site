@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 import {makeStyles} from '@material-ui/core';
 
 export const useAppStyles = makeStyles(theme => ({
@@ -14,7 +15,7 @@ export const useAppStyles = makeStyles(theme => ({
     color: 'white',
     border: '2px solid white',
     borderRadius: theme.spacing(5),
-    height: theme.spacing(5.75),
+    height: theme.spacing(5),
     fontSize: theme.spacing(2),
     maxWidth: '185px',
     padding: theme.spacing(2),
@@ -23,6 +24,34 @@ export const useAppStyles = makeStyles(theme => ({
     '&:hover, :focus': {
       background: theme.palette.primary.light,
       color: theme.palette.primary.contrastText,
+    },
+  },
+  mainButtonRounded: {
+    composes: ['$mainButton'],
+    height: '40px',
+    width: '44px',
+    minWidth: 'unset',
+    borderRadius: '100%',
+    float: 'right',
+  },
+  secondaryButton: {
+    background: theme.palette.primary.dark,
+    color: 'white',
+    border: '2px solid white',
+    borderRadius: theme.spacing(5),
+    height: theme.spacing(5),
+    fontSize: theme.spacing(2),
+    maxWidth: '248px',
+    padding: theme.spacing(2),
+    transition: 'all 0.5s',
+    textTransform: 'none',
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(0.5),
+    marginRight: theme.spacing(1),
+    '&:hover, :focus': {
+      background: 'white',
+      color: theme.palette.primary.dark,
+      borderColor: theme.palette.primary.dark,
     },
   },
   sectionDetailsContainer: {
@@ -67,6 +96,12 @@ export const useAppStyles = makeStyles(theme => ({
     alignItems: 'center',
     display: 'flex',
     flexDirection: 'column',
+    justifyContent: 'center',
+  },
+  flexContainerRowCenter: {
+    alignItems: 'center',
+    display: 'flex',
+    flexDirection: 'row',
     justifyContent: 'center',
   },
   buttonIcon: {
