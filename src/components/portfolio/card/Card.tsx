@@ -13,7 +13,7 @@ export const Card: React.FC = () => {
   return (
     <Grid container className='card-container flex row'>
       {cardData.map((item, index) => (
-        <Grid key={item.cardTitle} item className='card-item-container' xs={6}>
+        <Grid key={item.cardTitle} item className='card-item-container' lg={6} xs={12}>
           <ScrollAnimation
             animateOnce
             animateIn={index % 2 ? 'slideInRight' : 'slideInLeft'}

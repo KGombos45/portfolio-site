@@ -5,9 +5,11 @@ import {useAppStyles, useResponsive} from '../../hooks';
 
 type SectionProps = {
   sectionId: SectionTitles;
+  isWhiteSectionId?: boolean;
   sectionClassName: string;
   animateIn: 'slideInLeft' | 'slideInRight';
   detailsBody: React.ReactNode;
+  additionalRenders?: React.ReactNode;
 };
 
 export enum SectionTitles {
@@ -20,9 +22,11 @@ export enum SectionTitles {
 
 export const Section: React.FC<SectionProps> = ({
   sectionId,
+  isWhiteSectionId,
   sectionClassName,
   animateIn,
   detailsBody,
+  additionalRenders,
 }) => {
   const {
     sectionContainer,
@@ -38,7 +42,7 @@ export const Section: React.FC<SectionProps> = ({
       <Box className={sectionContainer}>
         <Box className={sectionTitle}>
           <ScrollAnimation animateOnce animateIn={animateIn} duration={1} initiallyVisible={false}>
-            <Typography color='primary' variant='h1'>
+            <Typography color={isWhiteSectionId ? undefined : 'primary'} variant='h1'>
               {sectionId}
             </Typography>
           </ScrollAnimation>
@@ -59,6 +63,7 @@ export const Section: React.FC<SectionProps> = ({
         >
           {detailsBody}
         </Box>
+        {additionalRenders}
       </Box>
     </section>
   );

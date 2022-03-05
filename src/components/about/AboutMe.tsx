@@ -2,27 +2,23 @@ import {Box, Button, Typography, makeStyles} from '@material-ui/core';
 import ScrollAnimation from 'react-animate-on-scroll';
 import {Link} from 'react-scroll';
 import {MailOutlineSharp, SelfieImage} from '../../assets';
-import {Image, SubHeader} from '../../base-components';
+import {Image, SectionTitles, SubHeader} from '../../base-components';
 import {useAppStyles} from '../../hooks';
 
-export const useStyles = makeStyles(theme => ({
-  contactButton: {
+const useStyles = makeStyles(theme => ({
+  mainButton: {
     background: theme.palette.primary.contrastText,
     color: 'white',
     borderRadius: theme.spacing(5),
-    width: theme.spacing(20.625),
     height: theme.spacing(5.75),
     fontSize: theme.spacing(2),
-    border: `${theme.spacing(0.25)} white solid`,
+    padding: theme.spacing(2),
     transition: 'all 0.5s',
     textTransform: 'none',
     '&:hover, :focus': {
       background: theme.palette.primary.light,
       color: theme.palette.primary.contrastText,
     },
-  },
-  buttonIcon: {
-    marginLeft: theme.spacing(1),
   },
   image: {
     height: '250px',
@@ -32,14 +28,14 @@ export const useStyles = makeStyles(theme => ({
 }));
 
 export const AboutMe = () => {
-  const {contactButton, buttonIcon, image} = useStyles();
-  const {sectionHalfContainer} = useAppStyles();
+  const {mainButton, image} = useStyles();
+  const {sectionHalfContainer, buttonIcon} = useAppStyles();
 
   return (
     <Box className={sectionHalfContainer} display='flex'>
       <ScrollAnimation animateOnce animateIn='slideInLeft' duration={1} initiallyVisible={false}>
         <Image alt='Profile Picture' className={image} src={SelfieImage} />
-        <SubHeader text='About Me' />
+        <SubHeader isUnderlined text='About Me' />
         <Box>
           <Typography paragraph>
             Hello, my name is Kevin Gombos. I'm a full-stack web developer with 2+ years of
@@ -50,8 +46,8 @@ export const AboutMe = () => {
             political science and my MS in Database Administration.
           </Typography>
         </Box>
-        <Link smooth duration={1000} to='contact'>
-          <Button className={contactButton} type='button'>
+        <Link smooth duration={1000} to={SectionTitles.Contact}>
+          <Button className={mainButton}>
             Get in touch
             <MailOutlineSharp className={buttonIcon} />
           </Button>

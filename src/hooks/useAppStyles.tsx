@@ -1,15 +1,6 @@
 import {makeStyles} from '@material-ui/core';
 
 export const useAppStyles = makeStyles(theme => ({
-  root: {
-    background: theme.palette.primary.light,
-    border: 0,
-    borderRadius: 3,
-    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-    color: 'white',
-    height: 48,
-    padding: '0 30px',
-  },
   sectionContainer: {
     maxWidth: '1200px',
     width: '100%',
@@ -32,10 +23,14 @@ export const useAppStyles = makeStyles(theme => ({
     textAlign: 'center',
     alignItems: 'center',
     padding: theme.spacing(0, 6.25),
+    [theme.breakpoints.down('md')]: {
+      padding: theme.spacing(0, 2),
+    },
   },
   sectionTitle: {
     width: '100%',
     textAlign: 'center',
+    color: 'white',
     paddingBottom: theme.spacing(2),
     [theme.breakpoints.down('md')]: {
       paddingBottom: theme.spacing(6),
@@ -57,5 +52,11 @@ export const useAppStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
+  },
+  buttonIcon: {
+    marginLeft: theme.spacing(1),
+  },
+  link: {
+    textDecoration: 'none',
   },
 }));

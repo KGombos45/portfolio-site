@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-max-depth */
 import {Box, List, ListItem, ListItemText, Typography, makeStyles} from '@material-ui/core';
 import {
   Timeline,
@@ -35,10 +34,16 @@ export const useStyles = makeStyles(theme => ({
     display: 'list-item',
     listStyle: 'circle',
   },
+  listCircleItalic: {
+    display: 'list-item',
+    listStyle: 'circle',
+    fontStyle: 'italic',
+  },
   timeLineItem: {
     composes: '$.MuiTimelineItem-missingOppositeContent',
     '&:before': {
       flex: 'unset',
+      padding: theme.spacing(0),
     },
   },
   timeLineConnector: {
@@ -54,6 +59,7 @@ export const useStyles = makeStyles(theme => ({
     composes: '$.MuiListItem-root',
     paddingTop: theme.spacing(0),
     paddingBottom: theme.spacing(0),
+    paddingLeft: theme.spacing(2),
   },
   dateBackground: {
     borderRadius: theme.spacing(1),
@@ -66,6 +72,7 @@ export const ResumeTimeline: React.FC<TimeLineDataProps> = ({data, subHeaderText
   const {
     listBullet,
     listCirlce,
+    listCircleItalic,
     timeLineItem,
     timeLineConnector,
     timeLineDot,
@@ -76,7 +83,7 @@ export const ResumeTimeline: React.FC<TimeLineDataProps> = ({data, subHeaderText
   return (
     <Box className={sectionHalfContainer}>
       <ScrollAnimation animateOnce animateIn={animateIn} duration={1} initiallyVisible={false}>
-        <SubHeader text={subHeaderText} />
+        <SubHeader isUnderlined text={subHeaderText} />
         <Timeline>
           {data.map((item, index) => (
             <TimelineItem key={item.location} className={timeLineItem}>
@@ -85,17 +92,17 @@ export const ResumeTimeline: React.FC<TimeLineDataProps> = ({data, subHeaderText
                 {index !== data.length - 1 && <TimelineConnector className={timeLineConnector} />}
               </TimelineSeparator>
               <TimelineContent>
-                <Box>
+                <Box textAlign='left'>
                   <Typography variant='h5'>{item.location}</Typography>
                 </Box>
-                <Box>
+                <Box textAlign='left'>
                   <Typography className={dateBackground}>{item.time}</Typography>
                 </Box>
                 <List className={listItem}>
                   <ListItem className={listItem}>
                     <Box display='flex' flexDirection='column'>
                       {item.title ? (
-                        <ListItemText className={listCirlce} primary={item.title} />
+                        <ListItemText className={listCircleItalic} primary={item.title} />
                       ) : (
                         item.degree!.map(deg => (
                           <ListItemText key={deg} className={listCirlce} primary={deg} />

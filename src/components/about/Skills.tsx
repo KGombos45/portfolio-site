@@ -31,7 +31,7 @@ export const Skills: React.FC = () => {
   return (
     <Box className={sectionHalfContainer} display='flex'>
       <ScrollAnimation animateOnce animateIn='slideInRight' duration={1} initiallyVisible={false}>
-        <SubHeader text='Skills' />
+        <SubHeader isUnderlined text='Skills' />
         <Box display='flex' flexDirection='row' flexWrap='wrap' justifyContent='center'>
           {skillsData.map(item => (
             <Box key={item.alt} className={imageContainer}>

@@ -2,6 +2,8 @@ import {Box, type BoxProps, Typography, makeStyles} from '@material-ui/core';
 
 type SubHeaderProps = {
   text: string;
+  isUnderlined?: boolean;
+  isSecondaryColor?: boolean;
 } & BoxProps;
 
 export const useStyles = makeStyles(theme => ({
@@ -20,14 +22,19 @@ export const useStyles = makeStyles(theme => ({
   },
 }));
 
-export const SubHeader: React.FC<SubHeaderProps> = ({text, ...props}) => {
+export const SubHeader: React.FC<SubHeaderProps> = ({
+  text,
+  isSecondaryColor,
+  isUnderlined,
+  ...props
+}) => {
   const {subHeader, subHeaderUnderline} = useStyles();
   return (
     <Box {...props} className={subHeader}>
-      <Typography color='primary' variant='h3'>
+      <Typography color={isSecondaryColor ? 'secondary' : 'primary'} variant='h3'>
         {text}
       </Typography>
-      <Box className={subHeaderUnderline} />
+      {isUnderlined && <Box className={subHeaderUnderline} />}
     </Box>
   );
 };
