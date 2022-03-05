@@ -3,7 +3,7 @@ import {makeStyles} from '@material-ui/core';
 export const useHomeStyles = makeStyles(theme => ({
   homeContainer: {
     height: 'calc(100vh + 53px)',
-    width: '100vw',
+    width: '100%',
     padding: theme.spacing(0),
     alignItems: 'center',
     display: 'flex',
@@ -12,7 +12,7 @@ export const useHomeStyles = makeStyles(theme => ({
   },
   backgroundContainer: {
     height: '100%',
-    width: '100vw',
+    width: '100%',
     left: '0',
     top: '0',
     position: 'absolute',
