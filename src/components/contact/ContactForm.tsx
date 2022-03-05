@@ -3,13 +3,16 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import {SubHeader} from '../../base-components';
 import {useSendEmail} from '../../hooks/useSendEmail';
 
-export const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(theme => ({
   form: {
     maxWidth: '450px',
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
     marginTop: theme.spacing(8),
+    [theme.breakpoints.down('md')]: {
+      marginTop: theme.spacing(4),
+    },
   },
   inputField: {
     width: '100%',
@@ -49,7 +52,7 @@ export const ContactForm: React.FC = () => {
   const {handleSendEmail} = useSendEmail();
 
   return (
-    <Box display='flex' flexDirection='column' width='100%'>
+    <Box display='flex' flexDirection='column' paddingX={3.125} width='100%'>
       <ScrollAnimation animateOnce animateIn='slideInLeft' duration={1} initiallyVisible={false}>
         <SubHeader isSecondaryColor text='Want to work together or have a question? Reach out!' />
       </ScrollAnimation>

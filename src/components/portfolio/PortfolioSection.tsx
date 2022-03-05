@@ -1,13 +1,24 @@
-import React from 'react';
 import './portfolio.scss';
+import {makeStyles} from '@material-ui/core';
 import {Section, SectionTitles} from '../../base-components';
-import {Card} from './card/Card';
+import {PortfolioCard} from './card/PortfolioCard';
 
-export const PortfolioSection: React.FC = () => (
-  <Section
-    animateIn='slideInLeft'
-    detailsBody={<Card />}
-    sectionClassName=''
-    sectionId={SectionTitles.Portfolio}
-  />
-);
+const useStyles = makeStyles(theme => ({
+  portfolioSectionContainer: {
+    width: '100vw',
+    background: theme.palette.secondary.dark,
+  },
+}));
+
+export const PortfolioSection: React.FC = () => {
+  const {portfolioSectionContainer} = useStyles();
+
+  return (
+    <Section
+      animateIn='slideInLeft'
+      detailsBody={<PortfolioCard />}
+      sectionClassName={portfolioSectionContainer}
+      sectionId={SectionTitles.Portfolio}
+    />
+  );
+};

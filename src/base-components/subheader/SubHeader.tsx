@@ -31,7 +31,10 @@ export const SubHeader: React.FC<SubHeaderProps> = ({
   const {subHeader, subHeaderUnderline} = useStyles();
   return (
     <Box {...props} className={subHeader}>
-      <Typography color={isSecondaryColor ? 'secondary' : 'primary'} variant='h3'>
+      <Typography
+        color={isSecondaryColor ? 'secondary' : 'primary'}
+        variant={isSecondaryColor ? 'h4' : 'h3'}
+      >
         {text}
       </Typography>
       {isUnderlined && <Box className={subHeaderUnderline} />}
