@@ -1,6 +1,6 @@
 import {Section, SectionTitles} from '../../base-components';
+import {usePortfolioCardStyles} from '../../hooks';
 import {PortfolioCard} from './PortfolioCard';
-import {usePortfolioCardStyles} from '../../hooks/styles-hooks/usePortfolioCardStyles';
 
 export const PortfolioSection: React.FC = () => {
   const {portfolioSectionContainer} = usePortfolioCardStyles();

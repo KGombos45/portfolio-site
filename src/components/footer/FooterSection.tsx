@@ -4,7 +4,7 @@ import {useAppData, useAppStyles, useFooterStyles} from '../../hooks';
 
 export const FooterSection: React.FC = () => {
   const scrollToTop = () => {
-    window.scrollTo({top: 0, behavior: 'smooth'});
+    document.documentElement.scrollTo({top: 0, behavior: 'smooth'});
   };
 
   const {flexContainerColumnCenter, flexContainerRowCenter} = useAppStyles();
