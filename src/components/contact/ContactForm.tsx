@@ -1,8 +1,8 @@
 import {Box, Button, TextField} from '@material-ui/core';
 import ScrollAnimation from 'react-animate-on-scroll';
 import {SubHeader} from '../../base-components';
-import {useContactStyles} from '../../hooks/styles-hooks/useContactStyles';
 import {useSendEmail} from '../../hooks/useSendEmail';
+import {useContactStyles} from './useContactStyles';
 
 export const ContactForm: React.FC = () => {
   const {form, inputField, inputMultiField, inputText, submitButton} = useContactStyles();

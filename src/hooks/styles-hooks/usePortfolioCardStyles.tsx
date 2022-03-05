@@ -1,6 +1,13 @@
 import {makeStyles} from '@material-ui/core';
 
-export const useCardStyles = makeStyles(theme => ({
+export const usePortfolioCardStyles = makeStyles(theme => ({
+  portfolioSectionContainer: {
+    width: '100vw',
+    background: theme.palette.secondary.dark,
+    [theme.breakpoints.down('md')]: {
+      padding: theme.spacing(0, 3.125),
+    },
+  },
   card: {
     height: '275px',
     margin: theme.spacing(1),
@@ -44,22 +51,6 @@ export const useCardStyles = makeStyles(theme => ({
   logo: {
     maxWidth: '100%',
     padding: theme.spacing(5),
-  },
-  mainButton: {
-    background: theme.palette.primary.contrastText,
-    color: 'white',
-    border: '2px solid white',
-    borderRadius: theme.spacing(5),
-    height: theme.spacing(5.75),
-    fontSize: theme.spacing(2),
-    maxWidth: '165px',
-    padding: theme.spacing(2),
-    transition: 'all 0.5s',
-    textTransform: 'none',
-    '&:hover, :focus': {
-      background: theme.palette.primary.light,
-      color: theme.palette.primary.contrastText,
-    },
   },
   paragraph: {
     color: 'white',

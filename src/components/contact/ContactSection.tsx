@@ -1,18 +1,11 @@
 import 'react-toastify/dist/ReactToastify.css';
-import {makeStyles} from '@material-ui/core';
 import {ToastContainer} from 'react-toastify';
 import {Section, SectionTitles} from '../../base-components';
 import {ContactForm} from './ContactForm';
-
-const useStyles = makeStyles(theme => ({
-  contactSectionContainer: {
-    background: theme.palette.primary.main,
-    height: '750px',
-  },
-}));
+import {useContactStyles} from './useContactStyles';
 
 export const ContactSection: React.FC = () => {
-  const {contactSectionContainer} = useStyles();
+  const {contactSectionContainer} = useContactStyles();
   return (
     <Section
       isWhiteSectionId
