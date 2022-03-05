@@ -1,4 +1,3 @@
-import './portfolio.scss';
 import {makeStyles} from '@material-ui/core';
 import {Section, SectionTitles} from '../../base-components';
 import {PortfolioCard} from './card/PortfolioCard';

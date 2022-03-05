@@ -24,8 +24,10 @@ const useStyles = makeStyles(theme => ({
       display: 'flex',
       flexDirection: 'column',
       padding: theme.spacing(2),
-      color: 'white',
       justifyContent: 'space-evenly',
+      textAlign: 'center',
+      alignItems: 'center',
+      color: theme.palette.primary.light,
     },
   },
   cardFront: {
@@ -49,10 +51,30 @@ const useStyles = makeStyles(theme => ({
   logo: {
     padding: theme.spacing(5),
   },
+  mainButton: {
+    background: theme.palette.primary.contrastText,
+    color: 'white',
+    border: '2px solid white',
+    borderRadius: theme.spacing(5),
+    height: theme.spacing(5.75),
+    fontSize: theme.spacing(2),
+    maxWidth: '165px',
+    padding: theme.spacing(2),
+    transition: 'all 0.5s',
+    textTransform: 'none',
+    '&:hover, :focus': {
+      background: theme.palette.primary.light,
+      color: theme.palette.primary.contrastText,
+    },
+  },
+  paragraph: {
+    color: 'white',
+    marginTop: theme.spacing(0.75),
+  },
 }));
 
 export const PortfolioCard: React.FC = () => {
-  const {card, cardFront, cardBack, logo} = useStyles();
+  const {card, cardFront, cardBack, logo, mainButton, paragraph} = useStyles();
   const {handleOpenModal, modal} = useModal();
   const {cardData} = useAppData();
 
@@ -72,11 +94,15 @@ export const PortfolioCard: React.FC = () => {
               </Box>
               <Box className={cardBack}>
                 <Box textAlign='center' width='100%'>
-                  <Typography variant='h5'>{item.cardTitle}</Typography>
-                  <Typography paragraph>{item.cardSubtitle}</Typography>
+                  <Typography variant='h4'>{item.cardTitle}</Typography>
+                  <Typography paragraph className={paragraph}>
+                    {item.cardSubtitle}
+                  </Typography>
                 </Box>
-                <div className='card-body-text'>{item.cardBody}</div>
-                <Button className='view-btn' type='button' onClick={() => handleOpenModal(item)}>
+                <Typography paragraph className={paragraph}>
+                  {item.cardBody}
+                </Typography>
+                <Button className={mainButton} type='button' onClick={() => handleOpenModal(item)}>
                   View More
                   <ArrowForwardSharp />
                 </Button>
