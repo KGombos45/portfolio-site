@@ -229,6 +229,7 @@
                     visibility: hidden;
                     top: 50px;
                     left: 0;
+                    display: none;
 
                     .menu-link {
                         visibility: hidden;
@@ -239,6 +240,7 @@
                         padding-top: 20px;
                         height: 35vh;
                         visibility: visible;
+                        display: block;
 
                         .menu-link {
                             display: block;
