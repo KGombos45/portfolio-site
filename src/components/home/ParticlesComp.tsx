@@ -36,7 +36,7 @@ export const ParticlesComp: React.FC = () => {
             random: true,
             anim: {
               enable: true,
-              speed: 25,
+              speed: 5,
               size_min: 0.1,
               sync: false,
             },

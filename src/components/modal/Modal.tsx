@@ -3,7 +3,7 @@ import 'react-perfect-scrollbar/dist/css/styles.css';
 import {Box, Button, Typography} from '@material-ui/core';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import {CloseSharp, ExitToAppSharp, GitHub} from '../../assets';
-import {useAppStyles, useModalStyles} from '../../hooks';
+import {useAppStyles, useModalStyles, useResponsive} from '../../hooks';
 import {type ModalDataType} from '../../hooks/useModal';
 
 type ModalProps = {
@@ -23,7 +23,9 @@ export const Modal: React.FC<ModalProps> = ({isToggled, isClosing, modalData, cl
     videoContainer,
     video,
     modalTitle,
+    perfectScrollBar,
   } = useModalStyles();
+  const {isMDDown} = useResponsive();
   if (isToggled && modalData !== undefined) {
     return (
       <Box
@@ -41,8 +43,8 @@ export const Modal: React.FC<ModalProps> = ({isToggled, isClosing, modalData, cl
           </Box>
           <Box padding={3.125}>
             <Box className={modalTitle}>
-              <Typography variant='h2'>{modalData.cardTitle}</Typography>
-              <Typography color='secondary' variant='h4'>
+              <Typography variant={isMDDown ? 'h3' : 'h2'}>{modalData.cardTitle}</Typography>
+              <Typography color='secondary' variant={isMDDown ? 'h5' : 'h4'}>
                 {modalData.frontEndSubtitle}
               </Typography>
               <Typography color='secondary' variant='h4'>
@@ -91,7 +93,7 @@ export const Modal: React.FC<ModalProps> = ({isToggled, isClosing, modalData, cl
               </Box>
             </Box>
             <Box marginBottom={2} marginTop={3.75}>
-              <PerfectScrollbar>
+              <PerfectScrollbar className={perfectScrollBar}>
                 <Typography paragraph>{modalData.cardBody}</Typography>
                 <Typography paragraph>{modalData.modalBody}</Typography>
                 {modalData.originalLink && (

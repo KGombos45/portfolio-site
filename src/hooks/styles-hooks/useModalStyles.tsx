@@ -26,6 +26,7 @@ export const useModalStyles = makeStyles(theme => ({
     borderRadius: theme.spacing(1),
     animation: 'zoomIn',
     animationDuration: '0.8s',
+    overflowY: 'auto',
   },
   modalContainerClose: {
     composes: ['$modalContainer'],
@@ -48,5 +49,10 @@ export const useModalStyles = makeStyles(theme => ({
   },
   modalTitle: {
     borderBottom: '1px solid #9696967d',
+  },
+  perfectScrollBar: {
+    [theme.breakpoints.down('md')]: {
+      maxHeight: '185px',
+    },
   },
 }));
