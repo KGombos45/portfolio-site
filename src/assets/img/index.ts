@@ -16,6 +16,7 @@ import PortfolioLogo from './portfolio.svg';
 import ReactLogo from './react.svg';
 import SqlServerLogo from './sqlserver.svg';
 import TypeScriptLogo from './typescript.svg';
+import UHOneShopReactLogo from './uhone-shop-react.svg';
 import UHOneShopLogo from './uhone-shop.svg';
 import UHOneLogo from './uhone.svg';
 
@@ -39,5 +40,6 @@ export {
   UHOneShopLogo,
   PortfolioLogo,
   UHOneLogo,
+  UHOneShopReactLogo,
   SiteLogo,
 };

@@ -34,7 +34,6 @@ export const useResumeStyles = makeStyles(theme => ({
     composes: '$.MuiListItem-root',
     paddingTop: theme.spacing(0),
     paddingBottom: theme.spacing(0),
-    paddingLeft: theme.spacing(2),
   },
   dateBackground: {
     borderRadius: theme.spacing(1),

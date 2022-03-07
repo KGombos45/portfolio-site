@@ -22,8 +22,8 @@ export const useSkillsData = () => {
     },
     {
       src: ReactLogo,
-      alt: 'React.js',
-      text: 'React.js',
+      alt: 'React',
+      text: 'React',
     },
     {
       src: JavaScriptLogo,

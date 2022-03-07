@@ -14,10 +14,18 @@ export const useWorkData = () => {
       experience: [
         `Helped rebuild the front-end/UI of UHOne.com and assisted the 
         conversion from Sitecore to Adobe Experience Manager (AEM)`,
-        'Implemented modern UI enhancements to UHOne.com/shop working alongside our UI/UX designer',
-        'Extensive work with AngularJS, .NET Core, and Microsoft SQL Server',
+        `Led efforts to create a reusable React template as well as spearheaded
+        efforts to rebuild our existing front-end for UHOne.com/shop from AngularJS
+        to React/TypeScript.`,
+        `Delivered a solution to migrate from a 20 year old in-house CMS to Adobe Experience Manager
+        for our React application.`,
+        `Delivered a Docusaurus website to house all documentation relating to our React template, 
+        application and Adobe AEM CMS documentation.`,
+        'Azure Pipelines yaml/terraforms experience for a CI/CD pipeline',
+        'Active Admin/Contributor/Code Reviewer on our React repository on GitHub',
+        `Extensive experience with AngularJS, React/Typescript, 
+        .NET Core, and Microsoft SQL Server`,
         'Experience working with RESTful web API’s and large datasets',
-        'Assisted with the implementation of newly configured microservices',
         'Worked with large and small dev teams in an Agile software development lifecycle',
       ],
     },
