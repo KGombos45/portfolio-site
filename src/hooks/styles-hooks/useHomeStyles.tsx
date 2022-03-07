@@ -2,7 +2,7 @@ import {makeStyles} from '@material-ui/core';
 
 export const useHomeStyles = makeStyles(theme => ({
   homeContainer: {
-    height: 'calc(100vh + 53px)',
+    height: '100vh',
     width: '100%',
     padding: theme.spacing(0),
     alignItems: 'center',

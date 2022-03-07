@@ -6,6 +6,7 @@ import {
   ContactSection,
   FooterSection,
   HomeSection,
+  Navbar,
   PortfolioSection,
   ResumeSection,
 } from './components';
@@ -15,6 +16,7 @@ export const App: React.FC = () => (
   <Box>
     <Styling>
       <HomeSection />
+      <Navbar />
       <AboutSection />
       <PortfolioSection />
       <ResumeSection />

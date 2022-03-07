@@ -1,10 +1,8 @@
-import './home.scss';
 import {Box, Button, Typography} from '@material-ui/core';
 import {Link} from 'react-scroll';
 import {ArrowForwardSharp} from '../../assets';
 import {SectionTitles} from '../../base-components';
 import {useAppStyles, useHomeStyles, useResponsive} from '../../hooks';
-import {Navbar} from './navbar/Navbar';
 import {ParticlesComp} from './ParticlesComp';
 
 export const HomeSection: React.FC = () => {
@@ -43,7 +41,6 @@ export const HomeSection: React.FC = () => {
             <ArrowForwardSharp className={buttonIcon} />
           </Button>
         </Link>
-        <Navbar />
       </Box>
     </section>
   );
