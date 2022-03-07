@@ -1,10 +1,9 @@
-import './modal.scss';
-import 'animate.css/animate.compat.css';
+/* eslint-disable max-lines-per-function */
 import 'react-perfect-scrollbar/dist/css/styles.css';
-import {Box, Button} from '@material-ui/core';
+import {Box, Button, Typography} from '@material-ui/core';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import {CloseSharp, ExitToAppSharp, GitHub} from '../../assets';
-import {useAppStyles} from '../../hooks';
+import {useAppStyles, useModalStyles} from '../../hooks';
 import {type ModalDataType} from '../../hooks/useModal';
 
 type ModalProps = {
@@ -16,83 +15,97 @@ type ModalProps = {
 
 export const Modal: React.FC<ModalProps> = ({isToggled, isClosing, modalData, close}) => {
   const {link, mainButton, mainButtonRounded, secondaryButton, buttonIcon} = useAppStyles();
+  const {
+    modalBackDrop,
+    modalBackDropClose,
+    modalContainer,
+    modalContainerClose,
+    videoContainer,
+    video,
+    modalTitle,
+  } = useModalStyles();
   if (isToggled && modalData !== undefined) {
     return (
-      <div
-        className={isClosing ? 'modal-backdrop flex close' : 'modal-backdrop flex'}
-        id='modalBackDrop'
+      <Box
+        alignItems='center'
+        className={isClosing ? modalBackDropClose : modalBackDrop}
+        display='flex'
+        flexDirection='column'
+        justifyContent='center'
       >
-        <div className={isClosing ? 'modal-container close' : 'modal-container'} id='modal'>
-          <div className='modal-video-container'>
-            <video autoPlay controls loop muted preload='auto'>
+        <Box className={isClosing ? modalContainerClose : modalContainer}>
+          <Box className={videoContainer}>
+            <video autoPlay controls loop muted className={video} preload='auto'>
               <source src={modalData.src} />
             </video>
-          </div>
-          <div className='modal-content'>
-            <div className='modal-title'>
-              {modalData.cardTitle}
-              <div className='modal-subtitle'>
-                <p>{modalData.frontEndSubtitle}</p>
-                <p>{modalData.backEndSubtitle}</p>
-                <div className='repo-btns-wrapper'>
-                  {modalData.repositoryLink && (
-                    <a
-                      className={link}
-                      href={modalData.repositoryLink}
-                      rel='noreferrer'
-                      target='_blank'
-                    >
-                      <Button className={secondaryButton} type='button'>
-                        View Repository
-                        <GitHub className={buttonIcon} />
-                      </Button>
-                    </a>
-                  )}
-                  {modalData.backEndRepositoryLink && (
-                    <a
-                      className={link}
-                      href={modalData.backEndRepositoryLink}
-                      rel='noreferrer'
-                      target='_blank'
-                    >
-                      <Button className={secondaryButton} type='button'>
-                        Back End Repository
-                        <GitHub className={buttonIcon} />
-                      </Button>
-                    </a>
-                  )}
-                  {modalData.frontEndRepositoryLink && (
-                    <a
-                      className={link}
-                      href={modalData.frontEndRepositoryLink}
-                      rel='noreferrer'
-                      target='_blank'
-                    >
-                      <Button className={secondaryButton} type='button'>
-                        Front End Repository
-                        <GitHub className={buttonIcon} />
-                      </Button>
-                    </a>
-                  )}
-                </div>
-              </div>
-            </div>
-            <div className='modal-body'>
+          </Box>
+          <Box padding={3.125}>
+            <Box className={modalTitle}>
+              <Typography variant='h2'>{modalData.cardTitle}</Typography>
+              <Typography color='secondary' variant='h4'>
+                {modalData.frontEndSubtitle}
+              </Typography>
+              <Typography color='secondary' variant='h4'>
+                {modalData.backEndSubtitle}
+              </Typography>
+              <Box display='flex' flexDirection='row' flexWrap='wrap' marginY={1}>
+                {modalData.repositoryLink && (
+                  <a
+                    className={link}
+                    href={modalData.repositoryLink}
+                    rel='noreferrer'
+                    target='_blank'
+                  >
+                    <Button className={secondaryButton} type='button'>
+                      View Repository
+                      <GitHub className={buttonIcon} />
+                    </Button>
+                  </a>
+                )}
+                {modalData.backEndRepositoryLink && (
+                  <a
+                    className={link}
+                    href={modalData.backEndRepositoryLink}
+                    rel='noreferrer'
+                    target='_blank'
+                  >
+                    <Button className={secondaryButton} type='button'>
+                      Back End Repository
+                      <GitHub className={buttonIcon} />
+                    </Button>
+                  </a>
+                )}
+                {modalData.frontEndRepositoryLink && (
+                  <a
+                    className={link}
+                    href={modalData.frontEndRepositoryLink}
+                    rel='noreferrer'
+                    target='_blank'
+                  >
+                    <Button className={secondaryButton} type='button'>
+                      Front End Repository
+                      <GitHub className={buttonIcon} />
+                    </Button>
+                  </a>
+                )}
+              </Box>
+            </Box>
+            <Box marginBottom={2} marginTop={3.75}>
               <PerfectScrollbar>
-                <p>{modalData.cardBody}</p>
-                <p>{modalData.modalBody}</p>
+                <Typography paragraph>{modalData.cardBody}</Typography>
+                <Typography paragraph>{modalData.modalBody}</Typography>
                 {modalData.originalLink && (
-                  <p>
+                  <Box>
                     Click here to view{' '}
                     <a href={modalData.originalLink} rel='noreferrer' target='_blank'>
                       Indie Coffee Roaster's Website
                     </a>
                     , the inspiration for the recreation.
-                  </p>
+                  </Box>
                 )}
               </PerfectScrollbar>
-            </div>
-            <Box className='modal-footer'>
+            </Box>
+            <Box>
               <a className={link} href={modalData.link} rel='noreferrer' target='_blank'>
                 <Button className={mainButton} type='button'>
                   View Site
@@ -103,9 +116,9 @@ export const Modal: React.FC<ModalProps> = ({isToggled, isClosing, modalData, cl
                 <CloseSharp />
               </Button>
             </Box>
-          </div>
-        </div>
-      </div>
+          </Box>
+        </Box>
+      </Box>
     );
   }
   return null;

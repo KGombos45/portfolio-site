@@ -1,5 +1,5 @@
 import {makeStyles} from '@material-ui/core';
-import Particles from 'react-particles-js';
+import Particles from 'react-tsparticles';
 
 const useStyles = makeStyles(() => ({
   particles: {

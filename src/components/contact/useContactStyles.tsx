@@ -42,7 +42,7 @@ export const useContactStyles = makeStyles(theme => ({
     marginTop: theme.spacing(1.5),
     '&:hover, :focus': {
       color: 'white',
-      background: theme.palette.primary.contrastText,
+      background: theme.palette.primary.light,
       borderColor: 'white',
     },
   },

@@ -1,4 +1,4 @@
-import './App.scss';
+import './App.css';
 import 'animate.css/animate.compat.css';
 import {Box} from '@material-ui/core';
 import {
