@@ -25,8 +25,6 @@ export const Navbar: React.FC = () => {
   const {sectionIdData} = useAppData();
 
   const showNavBar = () => {
-    // eslint-disable-next-line no-console
-    console.log(window.scrollY);
     if (window.scrollY >= 0 && window.scrollY < window.screen.height) {
       setShowHide(false);
       setSticky(false);
