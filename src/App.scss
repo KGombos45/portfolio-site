@@ -8,6 +8,9 @@
 html, body {
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
 }
 
 .flex {

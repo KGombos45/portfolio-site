@@ -11,7 +11,7 @@ export const useHomeStyles = makeStyles(theme => ({
     justifyContent: 'center',
   },
   backgroundContainer: {
-    height: '100%',
+    height: '100vh',
     width: '100%',
     left: '0',
     top: '0',

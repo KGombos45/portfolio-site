@@ -3,7 +3,7 @@ import Particles from 'react-particles-js';
 
 const useStyles = makeStyles(() => ({
   particles: {
-    height: '100%',
+    height: '100vh',
     width: '100%',
     objectFit: 'cover',
     //background: rgb(4,43,51);
