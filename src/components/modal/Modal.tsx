@@ -47,7 +47,7 @@ export const Modal: React.FC<ModalProps> = ({isToggled, isClosing, modalData, cl
               <Typography color='secondary' variant={isMDDown ? 'h5' : 'h4'}>
                 {modalData.frontEndSubtitle}
               </Typography>
-              <Typography color='secondary' variant='h4'>
+              <Typography color='secondary' variant={isMDDown ? 'h5' : 'h4'}>
                 {modalData.backEndSubtitle}
               </Typography>
               <Box display='flex' flexDirection='row' flexWrap='wrap' marginY={1}>

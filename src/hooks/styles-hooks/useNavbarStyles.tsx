@@ -14,7 +14,7 @@ export const useNavbarStyles = makeStyles(theme => ({
     height: '50px',
     textAlign: 'left',
     width: '100%',
-    zIndex: 99,
+    zIndex: 1001,
     flexDirection: 'row',
     display: 'flex',
     alignItems: 'center',
