@@ -2,7 +2,7 @@ permalink: /index.html
 
 # Welcome to my portfolio app
 
-![](https://repository-images.githubusercontent.com/342786786/457fb880-8b43-11eb-8122-54aee855d5b3)
+![](https://repository-images.githubusercontent.com/342786786/c92d1a04-1205-4f5e-9782-7676c9ca75db)
 
 
 This portfolio site was built utilizing the ReactJS framework, leveraging the benefits of Typescript and Material UI v4.
