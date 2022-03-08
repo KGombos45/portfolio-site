@@ -21,22 +21,25 @@ export const useModal = () => {
   const [isToggled, setIsToggled] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [modalData, setModalData] = useState<ModalDataType | undefined>(undefined);
+  const [timeoutId, setTimeOutId] = useState<NodeJS.Timeout>();
 
   const handleOpenModal = useCallback(
     (data: ModalDataType) => {
+      if (timeoutId) clearTimeout(timeoutId);
       setIsClosing(false);
       setIsToggled(true);
       setModalData(data);
     },
-    [setIsToggled, setModalData],
+    [setIsToggled, setModalData, timeoutId],
   );
 
   const handleCloseModal = useCallback(() => {
     setIsClosing(true);
-    setTimeout(() => {
+    const id = setTimeout(() => {
       setIsToggled(false);
     }, 700);
-  }, [setIsToggled]);
+    setTimeOutId(id);
+  }, [setIsToggled, setTimeOutId]);
 
   const modal = useMemo(
     () => (
