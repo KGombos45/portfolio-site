@@ -3,6 +3,7 @@ import {makeStyles} from '@material-ui/core';
 export const usePortfolioCardStyles = makeStyles(theme => ({
   portfolioSectionContainer: {
     width: '100%',
+    minHeight: '950px',
     background: theme.palette.secondary.dark,
     [theme.breakpoints.down('md')]: {
       padding: theme.spacing(0, 3.125),

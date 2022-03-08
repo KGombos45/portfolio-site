@@ -110,4 +110,7 @@ export const useAppStyles = makeStyles(theme => ({
   link: {
     textDecoration: 'none',
   },
+  defaultHeightClass: {
+    minHeight: '850px',
+  },
 }));

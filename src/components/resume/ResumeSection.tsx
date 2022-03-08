@@ -26,7 +26,6 @@ export const ResumeSection: React.FC = () => {
           <ResumeTimeline animateIn='slideInRight' data={educationData} subHeaderText='Education' />
         </>
       }
-      sectionClassName=''
       sectionId={SectionTitles.Resume}
     />
   );

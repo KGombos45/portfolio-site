@@ -11,7 +11,6 @@ export const AboutSection: React.FC = () => (
         <Skills />
       </>
     }
-    sectionClassName=''
     sectionId={SectionTitles.About}
   />
 );

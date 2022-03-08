@@ -6,7 +6,7 @@ import {useAppStyles, useResponsive} from '../../hooks';
 type SectionProps = {
   sectionId: SectionTitles;
   isWhiteSectionId?: boolean;
-  sectionClassName: string;
+  sectionClassName?: string;
   animateIn: 'slideInLeft' | 'slideInRight';
   detailsBody: React.ReactNode;
   additionalRenders?: React.ReactNode;
@@ -34,11 +34,15 @@ export const Section: React.FC<SectionProps> = ({
     sectionTitle,
     sectionTitleUnderlineContainer,
     sectionTitleUnderline,
+    defaultHeightClass,
   } = useAppStyles();
   const {isMDDown} = useResponsive();
 
   return (
-    <section className={sectionClassName} id={sectionId}>
+    <section
+      className={sectionClassName !== undefined ? sectionClassName : defaultHeightClass}
+      id={sectionId}
+    >
       <Box className={sectionContainer}>
         <Box className={sectionTitle}>
           <ScrollAnimation animateOnce animateIn={animateIn} duration={1} initiallyVisible={false}>
