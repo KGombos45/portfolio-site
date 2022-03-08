@@ -17,6 +17,16 @@ export const useHomeStyles = makeStyles(theme => ({
     top: '0',
     position: 'absolute',
   },
+  background: {
+    height: '100vh',
+    width: '100%',
+    objectFit: 'cover',
+    backfaceVisibility: 'hidden',
+    background:
+      'linear-gradient(222deg, rgba(4,43,51,1) 15%, rgba(227,27,109,0.8939950980392157) 100%)',
+    backgroundSize: '150% 100%',
+    animation: '$background-animation 12s ease infinite',
+  },
   headerText: {
     fontSize: theme.spacing(4.5),
     fontWeight: 'bold',
@@ -63,5 +73,16 @@ export const useHomeStyles = makeStyles(theme => ({
   },
   headerPadding: {
     paddingLeft: theme.spacing(1),
+  },
+  '@keyframes background-animation': {
+    '0%': {
+      backgroundPosition: '0% 81%',
+    },
+    '50%': {
+      backgroundPosition: '75% 20%',
+    },
+    '100%': {
+      backgroundPosition: '0% 81%',
+    },
   },
 }));

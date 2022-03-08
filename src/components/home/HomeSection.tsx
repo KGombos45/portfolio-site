@@ -3,18 +3,24 @@ import {Link} from 'react-scroll';
 import {ArrowForwardSharp} from '../../assets';
 import {SectionTitles} from '../../base-components';
 import {useAppStyles, useHomeStyles, useResponsive} from '../../hooks';
-import {ParticlesComp} from './ParticlesComp';
 
 export const HomeSection: React.FC = () => {
   const {flexContainerColumnCenter} = useAppStyles();
-  const {homeContainer, backgroundContainer, headerText, headerPadding, viewButton, buttonIcon} =
-    useHomeStyles();
+  const {
+    homeContainer,
+    backgroundContainer,
+    background,
+    headerText,
+    headerPadding,
+    viewButton,
+    buttonIcon,
+  } = useHomeStyles();
   const {isMDDown} = useResponsive();
 
   return (
     <section className={homeContainer} id={SectionTitles.Home}>
       <Box className={backgroundContainer}>
-        <ParticlesComp />
+        <Box className={background} />
       </Box>
 
       <Box className={flexContainerColumnCenter}>
