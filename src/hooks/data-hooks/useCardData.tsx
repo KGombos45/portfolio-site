@@ -33,7 +33,7 @@ export const useCardData = () => {
         with migrating our CMS (Content Management System) from a proprietary in-house solution
         that is nearly 20 years old to Adobe Experience Manager (AEM) with their GraphQL 
         endpoints.`,
-      link: 'https://stage.shop.uhone.com/census',
+      link: 'https://stage.shop.uhone.com/en/census',
     },
     {
       src: PortfolioVideo,
