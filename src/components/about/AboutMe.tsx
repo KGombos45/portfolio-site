@@ -16,7 +16,7 @@ export const AboutMe: React.FC = () => {
         <SubHeader isUnderlined text='About Me' />
         <Box>
           <Typography paragraph>
-            Hello, my name is Kevin Gombos. I'm a full-stack web developer with 3+ years of
+            Hello, my name is Kevin Gombos. I'm a full-stack web developer with 4+ years of
             experience working at
             <a className={link} href='https://www.uhone.com/'>
               United Healthcare
@@ -25,10 +25,11 @@ export const AboutMe: React.FC = () => {
             <a className={link} href='https://www.optum.com/'>
               Optum Technology
             </a>
-            . My primary passion is in front-end web development and UI/UX. Currently I am an
-            admin/contributor and code reviewer for UHOne's front-end rebuild efforts to migrate
-            from AngularJS to React/Typescript. In addition I hold three degrees in philosophy,
-            political science and my MS in Database Administration.
+            . My primary passion is in front-end web development and UI/UX. Currently, I am an
+            active contributor/admin and code reviewer on UHOne’s GitHub repository and was one of
+            our top contributors in our effort to migrate our front-end infrastructure from
+            AngularJS to Typescript/React. In addition I hold three degrees in philosophy, political
+            science and my MS in Database Administration.
           </Typography>
         </Box>
         <Link smooth duration={1000} to={SectionTitles.Contact}>
