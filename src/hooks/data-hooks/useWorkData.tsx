@@ -17,6 +17,8 @@ export const useWorkData = () => {
         `Delivered a solution to migrate from an old in-house CMS to Adobe Experience Manager 
         for our React application.`,
         'Active Admin/Contributor/Code Reviewer on our React repository on GitHub',
+        `Created a React/TypeScript code assessment and sat in during interviews when resources 
+        were not available`,
         `Helped rebuild the front-end/UI of UHOne.com and assisted the conversion from 
         Sitecore to Adobe Experience Manager (AEM)`,
         `Delivered a solution to migrate from a 20 year old in-house CMS to Adobe Experience 
