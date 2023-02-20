@@ -3,8 +3,8 @@ import {Box} from '@material-ui/core';
 import {useState} from 'react';
 import {Link} from 'react-scroll';
 import {CloseSharp, MenuSharp, SiteLogo} from '../../assets';
-import {Image} from '../../base-components';
-import {useAppData, useNavbarStyles} from '../../hooks';
+import {Image, SectionTitles} from '../../base-components';
+import {useNavbarStyles} from '../../hooks';
 
 export const Navbar: React.FC = () => {
   const {
@@ -22,7 +22,6 @@ export const Navbar: React.FC = () => {
   const [navBarOpen, setIsNavbarOpen] = useState(false);
   const [showHiddenNavbar, setShowHide] = useState(false);
   const [stickyNavBar, setSticky] = useState(false);
-  const {sectionIdData} = useAppData();
 
   const showNavBar = () => {
     if (window.scrollY >= 0 && window.scrollY < window.screen.height) {
@@ -49,7 +48,7 @@ export const Navbar: React.FC = () => {
           {!navBarOpen ? <MenuSharp className={iconStyle} /> : <CloseSharp className={iconStyle} />}
         </Box>
         <Box className={navBarOpen ? menuItemsWrapperActive : menuItemsWrapper}>
-          {Object.values(sectionIdData).map(title => (
+          {Object.values(SectionTitles).map(title => (
             <Link
               key={title}
               smooth

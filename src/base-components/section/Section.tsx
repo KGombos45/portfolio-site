@@ -1,7 +1,7 @@
 import {Box, Typography} from '@material-ui/core';
 import React from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
-import {useAppStyles, useResponsive} from '../../hooks';
+import {useAppStyles} from '../../hooks';
 
 type SectionProps = {
   sectionId: SectionTitles;
@@ -36,7 +36,6 @@ export const Section: React.FC<SectionProps> = ({
     sectionTitleUnderline,
     defaultHeightClass,
   } = useAppStyles();
-  const {isMDDown} = useResponsive();
 
   return (
     <section
@@ -60,13 +59,7 @@ export const Section: React.FC<SectionProps> = ({
             <Box className={sectionTitleUnderline} />
           </ScrollAnimation>
         </Box>
-        <Box
-          className={sectionDetailsContainer}
-          display='flex'
-          flexDirection={isMDDown ? 'column' : 'row'}
-        >
-          {detailsBody}
-        </Box>
+        <Box className={sectionDetailsContainer}>{detailsBody}</Box>
         {additionalRenders}
       </Box>
     </section>

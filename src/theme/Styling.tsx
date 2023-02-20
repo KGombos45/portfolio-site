@@ -34,18 +34,6 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: 'Raleway, sans-serif',
-    h1: {
-      fontSize: '34px',
-      fontWeight: 'bold',
-    },
-    h2: {
-      fontSize: '30px',
-      fontWeight: 'bold',
-    },
-    h3: {
-      fontSize: '26px',
-      fontWeight: 'bold',
-    },
     h4: {
       fontSize: '20px',
       fontWeight: 'bold',
@@ -75,6 +63,28 @@ const theme = createTheme({
   },
   spacing,
 });
+
+theme.typography.h1 = {
+  fontSize: '26px',
+  fontWeight: 'bold',
+  [theme.breakpoints.up('md')]: {
+    fontSize: '34px',
+  },
+};
+theme.typography.h2 = {
+  fontWeight: 'bold',
+  fontSize: '22px',
+  [theme.breakpoints.up('md')]: {
+    fontSize: '30px',
+  },
+};
+theme.typography.h3 = {
+  fontWeight: 'bold',
+  fontSize: '18px',
+  [theme.breakpoints.up('md')]: {
+    fontSize: '26px',
+  },
+};
 
 type ChildrenProps = {
   children: React.ReactNode;
