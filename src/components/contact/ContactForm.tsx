@@ -1,35 +1,34 @@
-import {Box, Button, TextField} from '@material-ui/core';
-import ScrollAnimation from 'react-animate-on-scroll';
-import {SubHeader} from '../../base-components';
+import {Box, Button, TextField} from '@mui/material';
+import {SubHeader, ScrollAnimation} from '../../base-components';
 import {useSendEmail} from '../../hooks/useSendEmail';
 import {useContactStyles} from './useContactStyles';
 
 export const ContactForm: React.FC = () => {
-  const {form, inputField, inputMultiField, inputText, submitButton} = useContactStyles();
+  const {classes} = useContactStyles();
   const {handleSendEmail} = useSendEmail();
 
   return (
-    <Box display='flex' flexDirection='column' paddingX={3.125} width='100%'>
-      <ScrollAnimation animateOnce animateIn='slideInLeft' duration={1} initiallyVisible={false}>
+    <Box display='flex' flexDirection='column' width='100%'>
+      <ScrollAnimation animateOnce animateIn='slideInLeft' duration={1}>
         <SubHeader isSecondaryColor text='Want to work together or have a question? Reach out!' />
       </ScrollAnimation>
-      <ScrollAnimation animateOnce animateIn='slideInUp' duration={1} initiallyVisible={false}>
+      <ScrollAnimation animateOnce animateIn='slideInUp' >
         <Box alignItems='center' display='flex' flexDirection='column'>
-          <form className={form} onSubmit={e => handleSendEmail(e)}>
+          <form className={classes.form} onSubmit={e => handleSendEmail(e)}>
             <TextField
               required
-              className={inputField}
+              className={classes.inputField}
               id='name'
-              inputProps={{className: inputText}}
+              inputProps={{className: classes.inputText}}
               name='name'
               placeholder='Name'
               variant='outlined'
             />
             <TextField
               required
-              className={inputField}
+              className={classes.inputField}
               id='email'
-              inputProps={{className: inputText}}
+              slotProps={{htmlInput: {className: classes.inputText}}}
               name='email'
               placeholder='Email'
               variant='outlined'
@@ -37,16 +36,16 @@ export const ContactForm: React.FC = () => {
             <TextField
               multiline
               required
-              className={inputMultiField}
+              className={classes.inputMultiField}
               id='subject'
-              inputProps={{className: inputText}}
+              slotProps={{htmlInput: {className: classes.inputText}}}
               name='subject'
               placeholder='Enter your message here...'
               rows={8}
               variant='standard'
             />
             <Box display='flex' flexDirection='row' justifyContent='right' width='100%'>
-              <Button className={submitButton} type='submit'>
+              <Button className={classes.submitButton} type='submit'>
                 Submit
               </Button>
             </Box>

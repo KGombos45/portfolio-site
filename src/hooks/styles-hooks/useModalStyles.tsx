@@ -1,6 +1,6 @@
-import {makeStyles} from '@material-ui/core';
+import {makeStyles} from 'tss-react/mui'
 
-export const useModalStyles = makeStyles(theme => ({
+export const useModalStyles = makeStyles()(theme => ({
   modalBackDrop: {
     height: '100vh',
     width: '100%',
@@ -13,7 +13,6 @@ export const useModalStyles = makeStyles(theme => ({
     animationDuration: '0.8s',
   },
   modalBackDropClose: {
-    composes: ['$modalBackDrop'],
     animation: 'fadeOut',
     animationDuration: '0.8s',
   },
@@ -29,7 +28,6 @@ export const useModalStyles = makeStyles(theme => ({
     overflowY: 'auto',
   },
   modalContainerClose: {
-    composes: ['$modalContainer'],
     animation: 'zoomOut',
     animationDuration: ' 0.8s',
   },
@@ -51,7 +49,7 @@ export const useModalStyles = makeStyles(theme => ({
     borderBottom: '1px solid #9696967d',
   },
   perfectScrollBar: {
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       maxHeight: '185px',
     },
   },

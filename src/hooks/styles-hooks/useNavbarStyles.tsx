@@ -1,40 +1,28 @@
 /* eslint-disable max-lines-per-function */
-import {makeStyles} from '@material-ui/core';
+import {makeStyles} from 'tss-react/mui'
 
-export const useNavbarStyles = makeStyles(theme => ({
+export const useNavbarStyles = makeStyles()(theme => ({
   logo: {
     height: '40px',
     width: '40px',
     marginLeft: '10px',
   },
   navMenu: {
-    position: 'relative',
+    position: 'sticky',
     background: '#00181d',
     borderBottom: 'solid #0e9b98 3px',
     height: '50px',
     textAlign: 'left',
+    top: 0,
     width: '100%',
     zIndex: 1001,
     flexDirection: 'row',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       justifyContent: 'space-between',
     },
-  },
-  navMenuSticky: {
-    composes: ['$navMenu'],
-    position: 'fixed',
-    top: '0',
-    left: '0',
-    width: '100%',
-    animation: 'slideInDown',
-    animationDuration: '.6s',
-  },
-  navMenuHidden: {
-    composes: ['$navMenu'],
-    visibility: 'hidden',
   },
   menuItemsWrapper: {
     transition: 'height 0.3s ease-out',
@@ -42,7 +30,7 @@ export const useNavbarStyles = makeStyles(theme => ({
     maxWidth: '1200px',
     background: '#051d28',
     width: '100%',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       left: '0',
       position: 'absolute',
       top: '50px',
@@ -53,12 +41,12 @@ export const useNavbarStyles = makeStyles(theme => ({
     },
   },
   menuItemsWrapperActive: {
-    composes: ['$menuItemsWrapper'],
     transition: 'all 0.5s ease-in-out',
     paddingTop: '20px',
-    height: '35vh',
+    height: 'auto',
     visibility: 'visible',
     display: 'block',
+    paddingBottom: theme.spacing(3.5)
   },
   link: {
     display: 'inline',
@@ -69,7 +57,7 @@ export const useNavbarStyles = makeStyles(theme => ({
     transition: 'all 0.5s',
     cursor: 'pointer',
     fontWeight: 'bold',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       display: 'block',
       padding: theme.spacing(0.625, 0.625, 0.625, 3.125),
     },

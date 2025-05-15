@@ -1,41 +1,37 @@
-import 'animate.css/animate.compat.css';
-import {Box, Button, Card, Grid, Typography} from '@material-ui/core';
-import ScrollAnimation from 'react-animate-on-scroll';
 import {ArrowForwardSharp} from '../../assets';
-import {Image} from '../../base-components';
+import {Image, ScrollAnimation} from '../../base-components';
 import {useAppData, useAppStyles, useModal, usePortfolioCardStyles} from '../../hooks';
+import { Grid, Card, Box, Typography, Button } from '@mui/material';
 
 export const PortfolioCard: React.FC = () => {
-  const {card, cardFront, cardBack, logo, paragraph} = usePortfolioCardStyles();
-  const {mainButton} = useAppStyles();
+  const {classes, cx} = usePortfolioCardStyles();
+  const {classes: appClasses} = useAppStyles();
   const {handleOpenModal, modal} = useModal();
   const {cardData} = useAppData();
-
+  debugger;
   return (
     <Grid container justifyContent='center'>
       {cardData.map((item, index) => (
-        <Grid key={item.cardTitle} item lg={5} xs={12}>
+        <Grid key={item.cardTitle} size={{xs: 10, md: 8, lg: 5}}>
           <ScrollAnimation
             animateOnce
             animateIn={index % 2 ? 'slideInRight' : 'slideInLeft'}
-            duration={1}
-            initiallyVisible={false}
           >
-            <Card className={card}>
-              <Box className={cardFront}>
-                <Image alt={item.cardTitle} className={logo} src={item.svg} />
+            <Card className={classes.card}>
+              <Box className={classes.cardFront}>
+                <Image alt={item.cardTitle} className={classes.logo} src={item.svg} />
               </Box>
-              <Box className={cardBack}>
+              <Box className={classes.cardBack}>
                 <Box textAlign='center' width='100%'>
                   <Typography variant='h4'>{item.cardTitle}</Typography>
-                  <Typography paragraph className={paragraph}>
+                  <Typography className={cx(classes.paragraph, classes.subTitle)}>
                     {item.cardSubtitle}
                   </Typography>
                 </Box>
-                <Typography paragraph className={paragraph}>
+                <Typography className={classes.paragraph}>
                   {item.cardBody}
                 </Typography>
-                <Button className={mainButton} type='button' onClick={() => handleOpenModal(item)}>
+                <Button className={appClasses.mainButton} type='button' onClick={() => handleOpenModal(item)}>
                   View More
                   <ArrowForwardSharp />
                 </Button>

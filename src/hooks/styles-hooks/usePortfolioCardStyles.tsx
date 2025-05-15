@@ -1,30 +1,27 @@
-import {makeStyles} from '@material-ui/core';
+import {makeStyles} from 'tss-react/mui'
 
-export const usePortfolioCardStyles = makeStyles(theme => ({
+export const usePortfolioCardStyles = makeStyles()(theme => ({
   portfolioSectionContainer: {
     width: '100%',
     minHeight: '950px',
     background: theme.palette.secondary.dark,
-    [theme.breakpoints.down('md')]: {
-      padding: theme.spacing(0, 3.125),
-    },
   },
   card: {
     height: '275px',
     margin: theme.spacing(1),
-    '&:hover $cardFront': {
+    position: 'relative',
+    '&:hover [class*="cardFront"]': {
       visibility: 'hidden',
       animation: 'fadeIn',
       animationDuration: '1s',
       display: 'none',
     },
-    '&:hover $cardBack': {
+    '&:hover [class*="cardBack"]': {
       visibility: 'visible',
       animation: 'fadeIn',
       animationDuration: '1s',
       display: 'flex',
       flexDirection: 'column',
-      padding: theme.spacing(2),
       justifyContent: 'space-evenly',
       textAlign: 'center',
       alignItems: 'center',
@@ -35,7 +32,6 @@ export const usePortfolioCardStyles = makeStyles(theme => ({
     visibility: 'visible',
     animation: 'fadeIn',
     animationDuration: '1s',
-    padding: theme.spacing(5),
     width: '100%',
     height: '100%',
     display: 'flex',
@@ -51,10 +47,15 @@ export const usePortfolioCardStyles = makeStyles(theme => ({
   },
   logo: {
     maxWidth: '100%',
-    padding: theme.spacing(5),
+    padding: theme.spacing(7.5),
+    overflow: 'hidden',
   },
   paragraph: {
     color: 'white',
     marginTop: theme.spacing(0.75),
+    padding: theme.spacing(0, 4),
   },
+  subTitle: {
+    overflowWrap: 'break-word',
+  }
 }));

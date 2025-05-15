@@ -5,14 +5,14 @@ import {ContactForm} from './ContactForm';
 import {useContactStyles} from './useContactStyles';
 
 export const ContactSection: React.FC = () => {
-  const {contactSectionContainer} = useContactStyles();
+  const {classes} = useContactStyles();
   return (
     <Section
       isWhiteSectionId
       additionalRenders={<ToastContainer />}
       animateIn='slideInLeft'
       detailsBody={<ContactForm />}
-      sectionClassName={contactSectionContainer}
+      sectionClassName={classes.contactSectionContainer}
       sectionId={SectionTitles.Contact}
     />
   );

@@ -1,7 +1,7 @@
-import {Box, Typography} from '@material-ui/core';
 import React from 'react';
-import ScrollAnimation from 'react-animate-on-scroll';
 import {useAppStyles} from '../../hooks';
+import { Box, Typography } from '@mui/material';
+import { ScrollAnimation } from '../scrollanimation';
 
 type SectionProps = {
   sectionId: SectionTitles;
@@ -28,23 +28,16 @@ export const Section: React.FC<SectionProps> = ({
   detailsBody,
   additionalRenders,
 }) => {
-  const {
-    sectionContainer,
-    sectionDetailsContainer,
-    sectionTitle,
-    sectionTitleUnderlineContainer,
-    sectionTitleUnderline,
-    defaultHeightClass,
-  } = useAppStyles();
+  const {classes} = useAppStyles();
 
   return (
     <section
-      className={sectionClassName !== undefined ? sectionClassName : defaultHeightClass}
+      className={sectionClassName !== undefined ? sectionClassName : classes.defaultHeightClass}
       id={sectionId}
     >
-      <Box className={sectionContainer}>
-        <Box className={sectionTitle}>
-          <ScrollAnimation animateOnce animateIn={animateIn} duration={1} initiallyVisible={false}>
+      <Box className={classes.sectionContainer}>
+        <Box className={classes.sectionTitle}>
+          <ScrollAnimation animateOnce animateIn={animateIn}>
             <Typography color={isWhiteSectionId ? undefined : 'primary'} variant='h1'>
               {sectionId}
             </Typography>
@@ -52,14 +45,12 @@ export const Section: React.FC<SectionProps> = ({
           <ScrollAnimation
             animateOnce
             animateIn={animateIn === 'slideInRight' ? 'slideInLeft' : 'slideInRight'}
-            className={sectionTitleUnderlineContainer}
-            duration={1}
-            initiallyVisible={false}
+            className={classes.sectionTitleUnderlineContainer}
           >
-            <Box className={sectionTitleUnderline} />
+            <Box className={classes.sectionTitleUnderline} />
           </ScrollAnimation>
         </Box>
-        <Box className={sectionDetailsContainer}>{detailsBody}</Box>
+        <Box className={classes.sectionDetailsContainer}>{detailsBody}</Box>
         {additionalRenders}
       </Box>
     </section>

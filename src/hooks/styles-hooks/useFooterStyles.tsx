@@ -1,6 +1,6 @@
-import {makeStyles} from '@material-ui/core';
+import {makeStyles} from 'tss-react/mui'
 
-export const useFooterStyles = makeStyles(theme => ({
+export const useFooterStyles = makeStyles()(theme => ({
   footer: {
     background: '#00181d',
     position: 'relative',

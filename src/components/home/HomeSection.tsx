@@ -1,44 +1,35 @@
-import {Box, Button, Typography} from '@material-ui/core';
 import {Link} from 'react-scroll';
 import {ArrowForwardSharp} from '../../assets';
 import {SectionTitles} from '../../base-components';
 import {useAppStyles, useHomeStyles} from '../../hooks';
+import { Box, Button, Typography } from '@mui/material';
 
 export const HomeSection: React.FC = () => {
-  const {flexContainerColumnCenter} = useAppStyles();
-  const {
-    homeContainer,
-    backgroundContainer,
-    background,
-    headerText,
-    headerPadding,
-    viewButton,
-    buttonIcon,
-  } = useHomeStyles();
+  const {classes: appClasses} = useAppStyles();
+  const {classes} = useHomeStyles();
 
   return (
-    <section className={homeContainer} id={SectionTitles.Home}>
-      <Box className={backgroundContainer}>
-        <Box className={background} />
+    <section className={classes.homeContainer} id={SectionTitles.Home}>
+      <Box className={classes.backgroundContainer}>
+        <Box className={classes.background} />
       </Box>
 
-      <Box className={flexContainerColumnCenter}>
-        <Box className={headerText} color='white'>
-          <Typography display='inline' variant='h1'>
-            Hello, I'm
-            <Typography className={headerPadding} color='secondary' display='inline' variant='h1'>
-              Kevin Gombos
+      <Box className={appClasses.flexContainerColumnCenter}>
+        <Box className={classes.headerText} color='white'>
+          <Box>
+            <Typography display='inline' variant='h1'>
+              Hello, I'm
             </Typography>
-            .
-          </Typography>
-
-          <br />
+            <Typography className={classes.headerPadding} display='inline' color='secondary' variant='h1'>
+              Kevin Gombos.
+            </Typography>
+          </Box>
           <Typography variant='h1'>I am a front-end web developer.</Typography>
         </Box>
         <Link smooth duration={1000} to={SectionTitles.About}>
-          <Button className={viewButton} type='button'>
+          <Button className={classes.viewButton} type='button'>
             View My Portfolio
-            <ArrowForwardSharp className={buttonIcon} />
+            <ArrowForwardSharp className={classes.buttonIcon} />
           </Button>
         </Link>
       </Box>

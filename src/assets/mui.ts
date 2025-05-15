@@ -10,4 +10,4 @@ export {
   LinkedIn,
   MenuSharp,
   MailOutlineSharp,
-} from '@material-ui/icons';
+} from '@mui/icons-material';

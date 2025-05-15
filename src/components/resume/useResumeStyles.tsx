@@ -1,6 +1,6 @@
-import {makeStyles} from '@material-ui/core';
+import {makeStyles} from 'tss-react/mui'
 
-export const useResumeStyles = makeStyles(theme => ({
+export const useResumeStyles = makeStyles()(theme => ({
   listBullet: {
     display: 'list-item',
     listStyle: 'initial',
@@ -15,23 +15,19 @@ export const useResumeStyles = makeStyles(theme => ({
     fontStyle: 'italic',
   },
   timeLineItem: {
-    composes: '$.MuiTimelineItem-missingOppositeContent',
     '&:before': {
       flex: 'unset',
       padding: theme.spacing(0),
     },
   },
   timeLineConnector: {
-    composes: '$.MuiTimelineConnector-root',
     background: theme.palette.secondary.light,
   },
   timeLineDot: {
-    composes: '$.MuiTimelineDot-defaultGrey',
     borderColor: theme.palette.primary.dark,
     background: 'transparent',
   },
   listItem: {
-    composes: '$.MuiListItem-root',
     paddingTop: theme.spacing(0),
     paddingBottom: theme.spacing(0),
   },

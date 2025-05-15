@@ -1,6 +1,5 @@
 import './App.css';
 import 'animate.css/animate.compat.css';
-import {Box} from '@material-ui/core';
 import {
   AboutSection,
   ContactSection,
@@ -11,6 +10,7 @@ import {
   ResumeSection,
 } from './components';
 import {Styling} from './theme';
+import { Box } from '@mui/material';
 
 export const App: React.FC = () => (
   <Box>

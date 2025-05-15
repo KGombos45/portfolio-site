@@ -1,28 +1,34 @@
-import {Box, Button, Typography} from '@material-ui/core';
-import ScrollAnimation from 'react-animate-on-scroll';
 import {Link} from 'react-scroll';
 import {MailOutlineSharp, SelfieImage} from '../../assets';
-import {Image, SectionTitles, SubHeader} from '../../base-components';
+import {Image, ScrollAnimation, SectionTitles, SubHeader} from '../../base-components';
 import {useAboutStyles, useAppStyles} from '../../hooks';
+import { Box, Button, Typography } from '@mui/material';
+
+const calcWorkYears = (): number => {
+  const now = new Date();
+  const startYear = 2019;
+
+  return now.getFullYear() - startYear;
+};
 
 export const AboutMe: React.FC = () => {
-  const {image, link} = useAboutStyles();
-  const {sectionHalfContainer, buttonIcon, mainButton} = useAppStyles();
+  const {classes} = useAboutStyles();
+  const {classes: appClasses} = useAppStyles();
 
   return (
-    <Box className={sectionHalfContainer} display='flex'>
-      <ScrollAnimation animateOnce animateIn='slideInLeft' duration={1} initiallyVisible={false}>
-        <Image alt='Profile Picture' className={image} src={SelfieImage} />
+    <Box className={appClasses.sectionHalfContainer} display='flex'>
+      <ScrollAnimation animateOnce animateIn='slideInLeft' className={classes.container}
+ >
+        <Image alt='Profile Picture' className={classes.image} src={SelfieImage} />
         <SubHeader isUnderlined text='About Me' />
-        <Box>
-          <Typography paragraph>
-            Hello, my name is Kevin Gombos. I'm a full-stack web developer with 4+ years of
+          <Typography>
+            Hello, my name is Kevin Gombos. I'm a full-stack web developer with {calcWorkYears()}+ years of
             experience working at
-            <a className={link} href='https://www.uhone.com/'>
+            <a className={classes.link} href='https://www.uhone.com/'>
               United Healthcare
             </a>
             and
-            <a className={link} href='https://www.optum.com/'>
+            <a className={classes.link} href='https://www.optum.com/'>
               Optum Technology
             </a>
             . My primary passion is in front-end web development and UI/UX. Currently, I am an
@@ -31,11 +37,10 @@ export const AboutMe: React.FC = () => {
             AngularJS to Typescript/React. In addition I hold three degrees in philosophy, political
             science and my MS in Database Administration.
           </Typography>
-        </Box>
         <Link smooth duration={1000} to={SectionTitles.Contact}>
-          <Button className={mainButton}>
+          <Button className={appClasses.mainButton}>
             Get in touch
-            <MailOutlineSharp className={buttonIcon} />
+            <MailOutlineSharp className={appClasses.buttonIcon} />
           </Button>
         </Link>
       </ScrollAnimation>

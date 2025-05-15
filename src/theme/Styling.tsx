@@ -1,15 +1,16 @@
-import {
-  CssBaseline,
-  StylesProvider,
-  ThemeProvider,
-  createTheme,
-  jssPreset,
-} from '@material-ui/core';
-import {create} from 'jss';
-import compose from 'jss-plugin-compose';
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { TssCacheProvider } from "tss-react";
+import createCache from "@emotion/cache";
+import { CacheProvider } from '@emotion/react';
 
-const jss = create({
-  plugins: [compose(), ...jssPreset().plugins],
+export const muiCache = createCache({
+  key: 'mui',
+  prepend: true,
+});
+
+const cache = createCache({
+  "key": "tss"
 });
 
 const spacing = 8;
@@ -33,7 +34,9 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Raleway, sans-serif',
+    allVariants : {
+      fontFamily: 'Raleway',
+    },
     h4: {
       fontSize: '20px',
       fontWeight: 'bold',
@@ -57,7 +60,7 @@ const theme = createTheme({
       xs: 0,
       sm: 320,
       md: 650,
-      lg: 868,
+      lg: 950,
       xl: 1272,
     },
   },
@@ -67,21 +70,21 @@ const theme = createTheme({
 theme.typography.h1 = {
   fontSize: '26px',
   fontWeight: 'bold',
-  [theme.breakpoints.up('md')]: {
+  [theme.breakpoints.up('lg')]: {
     fontSize: '34px',
   },
 };
 theme.typography.h2 = {
   fontWeight: 'bold',
   fontSize: '22px',
-  [theme.breakpoints.up('md')]: {
+  [theme.breakpoints.up('lg')]: {
     fontSize: '30px',
   },
 };
 theme.typography.h3 = {
   fontWeight: 'bold',
   fontSize: '18px',
-  [theme.breakpoints.up('md')]: {
+  [theme.breakpoints.up('lg')]: {
     fontSize: '26px',
   },
 };
@@ -91,10 +94,11 @@ type ChildrenProps = {
 };
 
 export const Styling: React.FC<ChildrenProps> = ({children}) => (
-  <StylesProvider jss={jss}>
+  <CacheProvider value={muiCache}>
+    <TssCacheProvider value={cache}>
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      {children}
+        {children}
     </ThemeProvider>
-  </StylesProvider>
+  </TssCacheProvider>
+  </CacheProvider>
 );

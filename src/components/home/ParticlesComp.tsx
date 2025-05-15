@@ -1,7 +1,7 @@
-import {makeStyles} from '@material-ui/core';
 import Particles from 'react-tsparticles';
+import {makeStyles} from 'tss-react/mui'
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles()(() => ({
   particles: {
     height: '100vh',
     width: '100%',
@@ -17,11 +17,11 @@ const useStyles = makeStyles(() => ({
 }));
 
 export const ParticlesComp: React.FC = () => {
-  const {particles} = useStyles();
+  const {classes} = useStyles();
 
   return (
     <Particles
-      className={particles}
+      className={classes.particles}
       params={{
         particles: {
           number: {

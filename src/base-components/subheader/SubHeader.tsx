@@ -1,12 +1,13 @@
-import {Box, type BoxProps, Typography, makeStyles} from '@material-ui/core';
+import { Box, Typography } from "@mui/material";
+import {makeStyles} from 'tss-react/mui'
 
 type SubHeaderProps = {
   text: string;
   isUnderlined?: boolean;
   isSecondaryColor?: boolean;
-} & BoxProps;
+};
 
-export const useStyles = makeStyles(theme => ({
+export const useStyles = makeStyles()(theme => ({
   subHeader: {
     margin: theme.spacing(2.5, 0, 2.5, 0),
     textAlign: 'center',
@@ -28,16 +29,16 @@ export const SubHeader: React.FC<SubHeaderProps> = ({
   isUnderlined,
   ...props
 }) => {
-  const {subHeader, subHeaderUnderline} = useStyles();
+  const {classes} = useStyles();
   return (
-    <Box {...props} className={subHeader}>
+    <Box {...props} className={classes.subHeader}>
       <Typography
         color={isSecondaryColor ? 'secondary' : 'primary'}
         variant={isSecondaryColor ? 'h4' : 'h3'}
       >
         {text}
       </Typography>
-      {isUnderlined && <Box className={subHeaderUnderline} />}
+      {isUnderlined && <Box className={classes.subHeaderUnderline} />}
     </Box>
   );
 };

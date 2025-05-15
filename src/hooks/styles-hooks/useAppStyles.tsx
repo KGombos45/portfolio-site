@@ -1,7 +1,25 @@
 /* eslint-disable max-lines-per-function */
-import {makeStyles} from '@material-ui/core';
+import type {Theme} from '@mui/material';
+import {makeStyles} from 'tss-react/mui'
+import type {CSSObject} from 'tss-react';
 
-export const useAppStyles = makeStyles(theme => ({
+const mainButtonStyles = (theme: Theme): CSSObject => ({
+  background: theme.palette.primary.dark,
+  color: 'white',
+  border: '2px solid white',
+  borderRadius: theme.spacing(5),
+  height: theme.spacing(5),
+  fontSize: theme.spacing(2),
+  maxWidth: '185px',
+  padding: theme.spacing(2),
+  transition: 'all 0.5s',
+  textTransform: 'none',
+  '&:hover, :focus': {
+    background: theme.palette.primary.light,
+  },
+});
+
+export const useAppStyles = makeStyles()(theme => ({
   sectionContainer: {
     maxWidth: '1200px',
     width: '100%',
@@ -11,23 +29,10 @@ export const useAppStyles = makeStyles(theme => ({
     padding: theme.spacing(12.5, 0, 12.5, 0),
   },
   mainButton: {
-    background: theme.palette.primary.contrastText,
-    color: 'white',
-    border: '2px solid white',
-    borderRadius: theme.spacing(5),
-    height: theme.spacing(5),
-    fontSize: theme.spacing(2),
-    maxWidth: '185px',
-    padding: theme.spacing(2),
-    transition: 'all 0.5s',
-    textTransform: 'none',
-    '&:hover, :focus': {
-      background: theme.palette.primary.light,
-      color: theme.palette.primary.contrastText,
-    },
+    ...mainButtonStyles(theme),
   },
   mainButtonRounded: {
-    composes: ['$mainButton'],
+    ...mainButtonStyles(theme),
     height: '40px',
     width: '44px',
     minWidth: 'unset',
@@ -57,7 +62,7 @@ export const useAppStyles = makeStyles(theme => ({
   sectionDetailsContainer: {
     display: 'flex',
     flexDirection: 'row',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       flexDirection: 'column',
     },
   },
@@ -68,8 +73,8 @@ export const useAppStyles = makeStyles(theme => ({
     textAlign: 'center',
     alignItems: 'center',
     padding: theme.spacing(0, 6.25),
-    [theme.breakpoints.down('md')]: {
-      padding: theme.spacing(0, 2),
+    [theme.breakpoints.down('lg')]: {
+      padding: 0,
     },
   },
   sectionTitle: {
@@ -77,7 +82,7 @@ export const useAppStyles = makeStyles(theme => ({
     textAlign: 'center',
     color: 'white',
     paddingBottom: theme.spacing(2),
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       paddingBottom: theme.spacing(6),
     },
   },

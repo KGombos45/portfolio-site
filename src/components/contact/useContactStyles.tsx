@@ -1,6 +1,6 @@
-import {makeStyles} from '@material-ui/core';
+import {makeStyles} from 'tss-react/mui'
 
-export const useContactStyles = makeStyles(theme => ({
+export const useContactStyles = makeStyles()(theme => ({
   contactSectionContainer: {
     background: theme.palette.primary.main,
     height: '750px',
@@ -11,7 +11,7 @@ export const useContactStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     marginTop: theme.spacing(8),
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       marginTop: theme.spacing(4),
     },
   },

@@ -1,12 +1,13 @@
-import {Box, Typography, makeStyles} from '@material-ui/core';
-import ScrollAnimation from 'react-animate-on-scroll';
-import {Image, SubHeader} from '../../base-components';
+import {Image, ScrollAnimation, SubHeader} from '../../base-components';
 import {useAppData, useAppStyles} from '../../hooks';
+import {makeStyles} from 'tss-react/mui'
+import { Box, Typography } from '@mui/material';
 
-export const useStyles = makeStyles(theme => ({
+export const useStyles = makeStyles()(theme => ({
   imageContainer: {
     margin: theme.spacing(1.25),
     display: 'block',
+    fontSize: 14,
     width: theme.spacing(12.375),
     borderRadius: theme.spacing(1),
     transition: 'all 0.6s ease-in-out',
@@ -16,7 +17,7 @@ export const useStyles = makeStyles(theme => ({
     },
   },
   image: {
-    height: theme.spacing(8.125),
+    height: theme.spacing(7),
     display: 'block',
     margin: '0 auto',
     paddingBottom: theme.spacing(0.625),
@@ -25,22 +26,22 @@ export const useStyles = makeStyles(theme => ({
 
 export const Skills: React.FC = () => {
   const {skillsData} = useAppData();
-  const {image, imageContainer} = useStyles();
-  const {sectionHalfContainer} = useAppStyles();
+  const {classes} = useStyles();
+  const {classes: appClasses} = useAppStyles();
 
   return (
-    <Box className={sectionHalfContainer} display='flex'>
-      <ScrollAnimation animateOnce animateIn='slideInRight' duration={1} initiallyVisible={false}>
+    <Box className={appClasses.sectionHalfContainer} display='flex'>
+      <ScrollAnimation animateOnce animateIn='slideInRight'>
         <SubHeader isUnderlined text='Skills' />
         <Box display='flex' flexDirection='row' flexWrap='wrap' justifyContent='center'>
           {skillsData.map(item => (
-            <Box key={item.alt} className={imageContainer}>
-              <Image alt={item.alt} className={image} src={item.src} />
+            <Box key={item.alt} className={classes.imageContainer}>
+              <Image alt={item.alt} className={classes.image} src={item.src} />
               {item.text}
             </Box>
           ))}
           <Box paddingTop={2}>
-            <Typography paragraph>
+            <Typography>
               And much more, with experience in back-end development with Microsoft Visual Studio.
               This includes C#/.Net, Java, C, C++.
             </Typography>
