@@ -11,5 +11,5 @@ export default defineConfig({
         open: true,
         port: 3000,
     },
-    base: '/portfolio-site', // Important if deploying to GitHub Pages or similar
+    base: './', // Important if deploying to GitHub Pages or similar
   });
