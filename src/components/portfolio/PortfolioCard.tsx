@@ -8,11 +8,11 @@ export const PortfolioCard: React.FC = () => {
   const {classes: appClasses} = useAppStyles();
   const {handleOpenModal, modal} = useModal();
   const {cardData} = useAppData();
-  debugger;
+
   return (
     <Grid container justifyContent='center'>
       {cardData.map((item, index) => (
-        <Grid key={item.cardTitle} size={{xs: 10, md: 8, lg: 5}}>
+        <Grid key={item.cardTitle} size={{xs: 11, sm: 10, md: 8, lg: 5}}>
           <ScrollAnimation
             animateOnce
             animateIn={index % 2 ? 'slideInRight' : 'slideInLeft'}

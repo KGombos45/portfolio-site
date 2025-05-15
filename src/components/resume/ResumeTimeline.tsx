@@ -21,7 +21,7 @@ type TimeLineDataProps = {
 export const ResumeTimeline: React.FC<TimeLineDataProps> = ({data, subHeaderText, animateIn}) => {
   const {classes} = useResumeStyles();
   const {classes: appClasses} = useAppStyles();
-  console.log('data', data);
+
   return (
     <Box className={appClasses.sectionHalfContainer}>
       <ScrollAnimation animateOnce animateIn={animateIn}>

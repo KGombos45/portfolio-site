@@ -47,8 +47,11 @@ export const usePortfolioCardStyles = makeStyles()(theme => ({
   },
   logo: {
     maxWidth: '100%',
-    padding: theme.spacing(7.5),
+    padding: theme.spacing(4),
     overflow: 'hidden',
+    [theme.breakpoints.up('md')]: {
+      padding: theme.spacing(7.5),
+    }
   },
   paragraph: {
     color: 'white',
