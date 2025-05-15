@@ -28,11 +28,11 @@ export const Section: React.FC<SectionProps> = ({
   detailsBody,
   additionalRenders,
 }) => {
-  const {classes} = useAppStyles();
+  const {classes, cx} = useAppStyles();
 
   return (
     <section
-      className={sectionClassName !== undefined ? sectionClassName : classes.defaultHeightClass}
+      className={cx(classes.defaultSectionClass, sectionClassName)}
       id={sectionId}
     >
       <Box className={classes.sectionContainer}>

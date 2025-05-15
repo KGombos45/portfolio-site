@@ -4,6 +4,7 @@ export const usePortfolioCardStyles = makeStyles()(theme => ({
   portfolioSectionContainer: {
     width: '100%',
     minHeight: '950px',
+    padding: 0,
     background: theme.palette.secondary.dark,
   },
   card: {

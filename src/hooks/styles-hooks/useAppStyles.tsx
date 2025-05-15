@@ -115,7 +115,8 @@ export const useAppStyles = makeStyles()(theme => ({
   link: {
     textDecoration: 'none',
   },
-  defaultHeightClass: {
+  defaultSectionClass: {
     minHeight: '850px',
+    padding: theme.spacing(0, 2),
   },
 }));
