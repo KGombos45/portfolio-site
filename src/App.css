@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   overflow-x: clip;
   -webkit-overflow-scrolling: touch;
   -webkit-font-smoothing: antialiased;

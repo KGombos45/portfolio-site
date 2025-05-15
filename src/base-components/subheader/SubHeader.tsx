@@ -1,5 +1,5 @@
-import { Box, Typography } from "@mui/material";
-import {makeStyles} from 'tss-react/mui'
+import {Box, Typography} from '@mui/material';
+import {makeStyles} from 'tss-react/mui';
 
 type SubHeaderProps = {
   text: string;

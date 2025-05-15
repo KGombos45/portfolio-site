@@ -1,6 +1,6 @@
 /* eslint-disable max-lines-per-function */
 import type {Theme} from '@mui/material';
-import {makeStyles} from 'tss-react/mui'
+import {makeStyles} from 'tss-react/mui';
 import type {CSSObject} from 'tss-react';
 
 const mainButtonStyles = (theme: Theme): CSSObject => ({

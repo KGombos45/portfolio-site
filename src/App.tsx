@@ -10,7 +10,7 @@ import {
   ResumeSection,
 } from './components';
 import {Styling} from './theme';
-import { Box } from '@mui/material';
+import {Box} from '@mui/material';
 
 export const App: React.FC = () => (
   <Box>

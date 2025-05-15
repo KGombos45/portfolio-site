@@ -14,7 +14,7 @@ export const useSendEmail = () => {
         'user_riigRc7g9Tt3dpEWepHtq',
       )
       .then(
-        result => {
+        () => {
           toast.success('Email sent succesfully! Thanks for reaching out!', {
             position: 'top-right',
             autoClose: 5000,
@@ -26,7 +26,7 @@ export const useSendEmail = () => {
           });
           e.currentTarget.reset();
         },
-        error => {
+        () => {
           toast.error(
             `An error occured sending your email, feel free to contact me at: 
             gomboskevin@gmail.com. Thank you!`,

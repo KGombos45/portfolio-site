@@ -28,7 +28,9 @@ export const FooterSection: React.FC = () => {
         ))}
       </Box>
       <Box marginTop={3.125} width='100%'>
-        <Typography className={classes.footnoteText}>KEVIN GOMBOS ©{new Date().getFullYear()}</Typography>
+        <Typography className={classes.footnoteText}>
+          KEVIN GOMBOS ©{new Date().getFullYear()}
+        </Typography>
       </Box>
     </footer>
   );

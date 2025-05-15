@@ -1,7 +1,7 @@
 import {Image, ScrollAnimation, SubHeader} from '../../base-components';
 import {useAppData, useAppStyles} from '../../hooks';
-import {makeStyles} from 'tss-react/mui'
-import { Box, Typography } from '@mui/material';
+import {makeStyles} from 'tss-react/mui';
+import {Box, Typography} from '@mui/material';
 
 export const useStyles = makeStyles()(theme => ({
   imageContainer: {

@@ -1,5 +1,5 @@
-import { motion, useInView } from 'framer-motion';
-import React, { useRef, ReactNode, useMemo } from 'react';
+import {motion, useInView} from 'framer-motion';
+import React, {useRef, ReactNode, useMemo} from 'react';
 
 export type ScrollAnimationProps = {
   children: ReactNode;
@@ -9,7 +9,7 @@ export type ScrollAnimationProps = {
   initiallyVisible?: boolean;
   delay?: number;
   className?: string;
-  offset?: number
+  offset?: number;
 };
 
 export const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
@@ -18,7 +18,7 @@ export const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
   animateOnce = true,
   duration = 1.55,
   initiallyVisible = false,
-  delay = .35,
+  delay = 0.35,
   className,
   offset = 0,
 }) => {
@@ -30,24 +30,27 @@ export const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
 
   const width = ref.current ? ref.current.getBoundingClientRect().width + 250 : 250;
 
-  const animationVariants = useMemo(() => ({
-    slideInLeft: {
-      hidden: { opacity: 0, x: -width },
-      visible: { opacity: 1, x: 0 },
-    },
-    slideInRight: {
-      hidden: { opacity: 0, x: width },
-      visible: { opacity: 1, x: 0 },
-    },
-    slideInUp: {
-      hidden: { opacity: 0, y: 250 },
-      visible: { opacity: 1, y: 0 },
-    },
-    slideInDown: {
-      hidden: { opacity: 0, y: -250 },
-      visible: { opacity: 1, y: 0 },
-    },
-  }), [width]);
+  const animationVariants = useMemo(
+    () => ({
+      slideInLeft: {
+        hidden: {opacity: 0, x: -width},
+        visible: {opacity: 1, x: 0},
+      },
+      slideInRight: {
+        hidden: {opacity: 0, x: width},
+        visible: {opacity: 1, x: 0},
+      },
+      slideInUp: {
+        hidden: {opacity: 0, y: 250},
+        visible: {opacity: 1, y: 0},
+      },
+      slideInDown: {
+        hidden: {opacity: 0, y: -250},
+        visible: {opacity: 1, y: 0},
+      },
+    }),
+    [width],
+  );
 
   return (
     <motion.div
@@ -56,7 +59,10 @@ export const ScrollAnimation: React.FC<ScrollAnimationProps> = ({
       initial={initiallyVisible ? 'visible' : 'hidden'}
       animate={isInView ? 'visible' : 'hidden'}
       variants={animationVariants[animateIn]}
-      transition={{ delay,  type: 'spring', stiffness: 100, damping: 21, mass: duration }}
+      transition={{delay, type: 'spring', stiffness: 100, damping: 21, mass: duration}}
+      style={{
+        willChange: 'transform, opacity',
+      }}
     >
       {children}
     </motion.div>

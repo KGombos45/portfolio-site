@@ -1,4 +1,4 @@
-import {makeStyles} from 'tss-react/mui'
+import {makeStyles} from 'tss-react/mui';
 
 export const usePortfolioCardStyles = makeStyles()(theme => ({
   portfolioSectionContainer: {
@@ -52,7 +52,7 @@ export const usePortfolioCardStyles = makeStyles()(theme => ({
     overflow: 'hidden',
     [theme.breakpoints.up('md')]: {
       padding: theme.spacing(7.5),
-    }
+    },
   },
   paragraph: {
     color: 'white',
@@ -61,5 +61,5 @@ export const usePortfolioCardStyles = makeStyles()(theme => ({
   },
   subTitle: {
     overflowWrap: 'break-word',
-  }
+  },
 }));

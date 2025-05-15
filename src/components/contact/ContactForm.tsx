@@ -12,7 +12,7 @@ export const ContactForm: React.FC = () => {
       <ScrollAnimation animateOnce animateIn='slideInLeft' duration={1}>
         <SubHeader isSecondaryColor text='Want to work together or have a question? Reach out!' />
       </ScrollAnimation>
-      <ScrollAnimation animateOnce animateIn='slideInUp' >
+      <ScrollAnimation animateOnce animateIn='slideInUp'>
         <Box alignItems='center' display='flex' flexDirection='column'>
           <form className={classes.form} onSubmit={e => handleSendEmail(e)}>
             <TextField

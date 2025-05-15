@@ -1,4 +1,4 @@
-import {makeStyles} from 'tss-react/mui'
+import {makeStyles} from 'tss-react/mui';
 
 export const useAboutStyles = makeStyles()(theme => ({
   image: {
@@ -15,5 +15,5 @@ export const useAboutStyles = makeStyles()(theme => ({
     flexDirection: 'column',
     gap: theme.spacing(2),
     alignItems: 'center',
-  }
+  },
 }));

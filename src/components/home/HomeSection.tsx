@@ -2,7 +2,7 @@ import {Link} from 'react-scroll';
 import {ArrowForwardSharp} from '../../assets';
 import {SectionTitles} from '../../base-components';
 import {useAppStyles, useHomeStyles} from '../../hooks';
-import { Box, Button, Typography } from '@mui/material';
+import {Box, Button, Typography} from '@mui/material';
 
 export const HomeSection: React.FC = () => {
   const {classes: appClasses} = useAppStyles();
@@ -20,7 +20,12 @@ export const HomeSection: React.FC = () => {
             <Typography display='inline' variant='h1'>
               Hello, I'm
             </Typography>
-            <Typography className={classes.headerPadding} display='inline' color='secondary' variant='h1'>
+            <Typography
+              className={classes.headerPadding}
+              display='inline'
+              color='secondary'
+              variant='h1'
+            >
               Kevin Gombos.
             </Typography>
           </Box>

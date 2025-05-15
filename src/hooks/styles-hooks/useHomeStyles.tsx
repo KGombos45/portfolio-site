@@ -1,4 +1,4 @@
-import {makeStyles} from 'tss-react/mui'
+import {makeStyles} from 'tss-react/mui';
 
 export const useHomeStyles = makeStyles()(theme => {
   return {
@@ -29,16 +29,16 @@ export const useHomeStyles = makeStyles()(theme => {
       animation: 'background-animation 12s ease infinite',
 
       '@keyframes background-animation': {
-    '0%': {
-      backgroundPosition: '0% 81%',
-    },
-    '50%': {
-      backgroundPosition: '75% 20%',
-    },
-    '100%': {
-      backgroundPosition: '0% 81%',
-    },
-  }
+        '0%': {
+          backgroundPosition: '0% 81%',
+        },
+        '50%': {
+          backgroundPosition: '75% 20%',
+        },
+        '100%': {
+          backgroundPosition: '0% 81%',
+        },
+      },
     },
     headerText: {
       fontSize: theme.spacing(4.5),
@@ -87,5 +87,5 @@ export const useHomeStyles = makeStyles()(theme => {
     headerPadding: {
       paddingLeft: theme.spacing(1),
     },
-  }
+  };
 });

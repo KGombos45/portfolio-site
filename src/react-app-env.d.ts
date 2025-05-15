@@ -1,4 +1,3 @@
-/* eslint-disable import/no-default-export */
 /// <reference types="react-scripts" />
 
 declare module '*.mp4' {
@@ -9,4 +8,14 @@ declare module '*.mp4' {
 declare module '*.pdf' {
   const src: string;
   export default src;
+}
+
+declare module '*.svg' {
+  const content: string;
+  export default content;
+}
+
+declare module '*.png' {
+  const content: string;
+  export default content;
 }

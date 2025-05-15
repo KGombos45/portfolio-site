@@ -1,5 +1,5 @@
 /* eslint-disable max-lines-per-function */
-import {makeStyles} from 'tss-react/mui'
+import {makeStyles} from 'tss-react/mui';
 
 export const useNavbarStyles = makeStyles()(theme => ({
   logo: {
@@ -46,7 +46,7 @@ export const useNavbarStyles = makeStyles()(theme => ({
     height: 'auto',
     visibility: 'visible',
     display: 'block',
-    paddingBottom: theme.spacing(3.5)
+    paddingBottom: theme.spacing(3.5),
   },
   link: {
     display: 'inline',

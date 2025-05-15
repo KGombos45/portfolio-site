@@ -11,7 +11,13 @@ export const ResumeSection: React.FC = () => {
     <Section
       additionalRenders={
         <Box alignItems='center' display='flex' flexDirection='column' paddingTop={4} width='100%'>
-          <a download className={classes.link} href={ResumePDF} rel='noopener noreferrer' target='_blank'>
+          <a
+            download
+            className={classes.link}
+            href={ResumePDF}
+            rel='noopener noreferrer'
+            target='_blank'
+          >
             <Button className={classes.mainButton} type='button'>
               Download PDF
               <GetApp className={classes.buttonIcon} />

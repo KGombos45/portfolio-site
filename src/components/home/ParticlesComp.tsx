@@ -1,5 +1,5 @@
 import Particles from 'react-tsparticles';
-import {makeStyles} from 'tss-react/mui'
+import {makeStyles} from 'tss-react/mui';
 
 const useStyles = makeStyles()(() => ({
   particles: {

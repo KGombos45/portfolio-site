@@ -4,12 +4,11 @@ permalink: /index.html
 
 ![](https://repository-images.githubusercontent.com/342786786/c92d1a04-1205-4f5e-9782-7676c9ca75db)
 
-
 This portfolio site was built utilizing the ReactJS framework, leveraging the benefits of Typescript and Material UI v4.
 
 This application was originally built on JavaScript, native HTML elements along with Sass CSS style sheets and a minimal library called Ant Design.
-The code at that point was half JavaScript, half SCSS. As of 05 March 2022 I have begun efforts to refactor this code with what I have learned over the past year since 
-I first created this application. Therefore, I have chosen to convert it to TypeScript, and now this application's code is majority TypeScript as I slowly remove all existing 
+The code at that point was half JavaScript, half SCSS. As of 05 March 2022 I have begun efforts to refactor this code with what I have learned over the past year since
+I first created this application. Therefore, I have chosen to convert it to TypeScript, and now this application's code is majority TypeScript as I slowly remove all existing
 native HTML elements and custom CSS styling in preference for Material UI and it's JSS/MakeStyles solutions.
 
 - Material UI v4
@@ -21,4 +20,3 @@ native HTML elements and custom CSS styling in preference for Material UI and it
 ## Contact
 
 Gomboskevin@gmail.com
-

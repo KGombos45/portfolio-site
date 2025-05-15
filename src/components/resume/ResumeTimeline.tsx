@@ -1,8 +1,15 @@
 import {SubHeader, ScrollAnimation} from '../../base-components';
 import {useAppStyles} from '../../hooks';
 import {useResumeStyles} from './useResumeStyles';
-import { TimelineItem, TimelineSeparator, TimelineDot, TimelineConnector, TimelineContent, Timeline } from '@mui/lab';
-import { Box, Typography, List, ListItem, ListItemText } from '@mui/material';
+import {
+  TimelineItem,
+  TimelineSeparator,
+  TimelineDot,
+  TimelineConnector,
+  TimelineContent,
+  Timeline,
+} from '@mui/lab';
+import {Box, Typography, List, ListItem, ListItemText} from '@mui/material';
 
 type ListDataType = {
   location: string;
@@ -31,7 +38,9 @@ export const ResumeTimeline: React.FC<TimeLineDataProps> = ({data, subHeaderText
             <TimelineItem key={item.location} className={classes.timeLineItem}>
               <TimelineSeparator>
                 <TimelineDot className={classes.timeLineDot} />
-                {index !== data.length - 1 && <TimelineConnector className={classes.timeLineConnector} />}
+                {index !== data.length - 1 && (
+                  <TimelineConnector className={classes.timeLineConnector} />
+                )}
               </TimelineSeparator>
               <TimelineContent>
                 <Box textAlign='left'>

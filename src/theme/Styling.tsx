@@ -1,8 +1,7 @@
-import CssBaseline from '@mui/material/CssBaseline';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { TssCacheProvider } from "tss-react";
-import createCache from "@emotion/cache";
-import { CacheProvider } from '@emotion/react';
+import {ThemeProvider, createTheme} from '@mui/material/styles';
+import {TssCacheProvider} from 'tss-react';
+import createCache from '@emotion/cache';
+import {CacheProvider} from '@emotion/react';
 
 export const muiCache = createCache({
   key: 'mui',
@@ -10,7 +9,7 @@ export const muiCache = createCache({
 });
 
 const cache = createCache({
-  "key": "tss"
+  key: 'tss',
 });
 
 const spacing = 8;
@@ -34,7 +33,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    allVariants : {
+    allVariants: {
       fontFamily: 'Raleway',
     },
     h4: {
@@ -96,9 +95,7 @@ type ChildrenProps = {
 export const Styling: React.FC<ChildrenProps> = ({children}) => (
   <CacheProvider value={muiCache}>
     <TssCacheProvider value={cache}>
-    <ThemeProvider theme={theme}>
-        {children}
-    </ThemeProvider>
-  </TssCacheProvider>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    </TssCacheProvider>
   </CacheProvider>
 );

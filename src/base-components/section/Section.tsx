@@ -1,7 +1,7 @@
 import React from 'react';
 import {useAppStyles} from '../../hooks';
-import { Box, Typography } from '@mui/material';
-import { ScrollAnimation } from '../scrollanimation';
+import {Box, Typography} from '@mui/material';
+import {ScrollAnimation} from '../scrollanimation';
 
 type SectionProps = {
   sectionId: SectionTitles;
@@ -31,10 +31,7 @@ export const Section: React.FC<SectionProps> = ({
   const {classes, cx} = useAppStyles();
 
   return (
-    <section
-      className={cx(classes.defaultSectionClass, sectionClassName)}
-      id={sectionId}
-    >
+    <section className={cx(classes.defaultSectionClass, sectionClassName)} id={sectionId}>
       <Box className={classes.sectionContainer}>
         <Box className={classes.sectionTitle}>
           <ScrollAnimation animateOnce animateIn={animateIn}>
